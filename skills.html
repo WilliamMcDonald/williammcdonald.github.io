@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+  <!--- 2071124516 --->
+<head>
+  <title> William McDonald </title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/custom.min.css">
+    
+  <script src="js/jquery.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  
+  <style>
+  
+  .navbar {
+		margin-bottom 0;
+		background-color: rgb(0,0,0);
+		border: 1px solid white;
+		font-size: 11px;
+		letter-spacing: 2px;
+		font-family: Verdana;
+}
+.nav-tabs li a, .navbar .navbar-brand {
+	color: rgb(150,150,150);
+}
+.navbar-nav li a:hover {
+	color: rgb(150,150,150);
+}
+.navbar-nav li.active a {
+	color: rgb(150,150,150);
+	background-color: rgb(100,100,100);
+}
+.navbar-default .navbar-toggle {
+	border-color: rgb(150,150,150);
+}
+.open .dropdown-toggle {
+	color: rgb(150,150,150);
+	background-color: rgb(100,100,100);
+}
+.dropdown-menu li a {
+	color: rgb(150,150,150);
+	background-color: rgb(100,100,100);
+}
+.dropdown-menu li a:hover {
+	background-color: rgb(100,100,100);
+}
+
+body {
+	color: rgb(100,100,100);
+	background-color: rgb(20,20,20);	
+}
+
+  h1 {
+	background-color: rgb(50,50,50);
+	color: rgb(0,0,255);
+	border: 1px solid white;
+	padding: 80px;
+	margin: 20px;
+	text-align: "center";
+  }
+  h2 {color: rgb(255,0,0);}
+  h3 {color: rgb(200,200,200);}
+  </style>
+</head>
+<body>
+<! ----------- add your bootstrap code  below this line--- >
+
+<nav class="navbar navbar-default navbar-fixed-top">
+	<div class="container-fluid">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+		</div>
+		<div class="collapse navbar-collapse" id="myNavbar">
+		<ul class="nav navbar-nav">
+			<li><a href="index.html"> Home </a></li>
+			<li><a href="skills.html"> Computer Science Skills </a></li>
+			<li><a href="TritechSummerSchool.html"> Tritech Summer School </a></li>
+			<li><a href="https://github.com/WilliamMcDonald"> Github </a></li>
+			<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#"> Github Repositories <span class="caret"></span></a>
+				<ul class="dropdown-menu">
+					<li><a href="https://github.com/WilliamMcDonald/Arduino"> Arduino </a></a></li>
+					<li><a href="https://github.com/WilliamMcDonald/HTML"> HTML </a></li>
+					<li><a href="https://github.com/WilliamMcDonald/Java"> Java </a></li>
+					<li><a href="https://github.com/WilliamMcDonald/Python"> Python </a></a></li>
+					<li><a href="https://github.com/WilliamMcDonald/williammcdonald.github.io"> Github IO </a></li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+	</div>
+</nav>
+
+<! ----------- end of my code -->
+<! ------------- do not delete this code -->
+
+<script>
+$(document).ready(function(){
+  // Add scrollspy to <body>
+  $('body').scrollspy({target: ".navbar", offset: 50});   
+  // Add smooth scrolling on all links inside the navbar
+  $("#myNavbar a").on('click', function(event) {
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+      // Store hash
+      var hash = this.hash;
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 800, function(){
+   
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    }  // End if
+  });
+});
+</script>
+
+
+<h1> William McDonald </h1>
+
+<h2> Computer Science Skills: </h2>
+
+<h3> Advanced: </h3>
+  <ul>
+  <li> Coding: </li>
+    <ul><li> Visual Basic </li></ul>
+  <li> OS installation: </li>
+    <ul type="circle">
+    <li> Windows 10 (twice) </li>
+    <li> CentOS (once) </li>
+    </ul>
+  <li> Arduino </li>
+  <li> Command Line </li>
+  <li> Raspberry Pi </li>
+  <li> 568B Punchdown </li>
+  <li> Ethernet </li>
+  </ul>
+  
+<h3> Intermediate: </h3>
+  <ul> 
+  <li> Coding: </li>
+    <ul> 
+    <li> Python </li>
+    <li> Java </li>
+    <li> Lua </li>
+    <li> C </li>
+    <li> HTML 5 </li>
+    </ul>
+  <li> SSH </li>
+  </ul>
+<h3> Beginning: </h3>
+  <ul>
+  <li> Coding: </li>	
+    <ul> 
+    <li> Java Script </li>
+    </ul>
+  <li> Apache </li>
+  <li> Set Classpath for Java </li>
+  <li> Wireshark </li>
+  </ul>
+
+</body>
+</html>
