@@ -85,6 +85,16 @@ background-color: rgb(100,100,100);
   background-color: rgb(80,80,80);
   border-color: rgb(150,150,150);
 }
+
+/* Well */
+
+.well {
+  color: rgb(100,100,100);
+  background-color: rgb(10,10,10);
+  border-color: rgb(100,100,100);
+  border-width: 1px;
+}
+
 /* Bod */
 
 body {
@@ -104,3 +114,7 @@ text-align: center;
 h2 {color: rgb(255,0,0);}
 
 h3 {color: rgb(200,200,200);}
+
+q {
+  text-align: left;
+}

@@ -5,11 +5,11 @@
   <title> William McDonald: Template </title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="css/bootstrap.min.css">
-  <link rel="stylesheet" href="css/custom.min.css">
-  <link rel="stylesheet" href="css/nat.css">
-  <script src="js/jquery.min.js"></script>
-  <script src="js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="../css/bootstrap.min.css">
+  <link rel="stylesheet" href="../css/custom.min.css">
+  <link rel="stylesheet" href="../css/nat.css">
+  <script src="../js/jquery.min.js"></script>
+  <script src="../js/bootstrap.min.js"></script>
 
 </head>
 <body>
@@ -26,7 +26,7 @@
 		</div>
 		<div class="collapse navbar-collapse" id="myNavbar">
 		<ul class="nav navbar-nav">
-			<li><a href="index.html"> Home </a></li>
+			<li><a href="../index.html"> Home </a></li>
 			<li><a href="about.html"> About Me </a></li>
 			<li><a href="tritech/tt2016.html"> Tritech Summer School </a></li>
 			<li><a href="https://github.com/WilliamMcDonald"> Github </a></li>
@@ -84,39 +84,25 @@ $(document).ready(function(){
 	<div class="row content">
         <!-- Left -->
 		<div class="col-sm-2 sidenav">
-      <h3> Contact Me </h3>
-      <p> This is currently a Work in progress, and does not work </p>
-      <p> If you would like to contact me, contact me at wmcdonald2k.git@gmail.com </p>
-      <a href="contact/index.php" class="btn btn-primary disabled" role="button"> Form </a>
-		</div>
-        <!-- Middle -->
-		<div class="col-sm-8 text-left">
-      <p> This is just a template to test out links and / or css changes. Feel free to use this layout for your own website. </p>
-      <p> No need to give me credit, but it is appreciated if you do. </p>
-      <p> Thank you and Auf Wiedersehen! </p>
-      <br>
-      <h1> H1 Test </h1>
-      <h2> H2 Test </h2>
-      <h3> H3 Test </h3>
-      <h4> H4 Test </h4>
-      <h5> H5 Test </h5>
-      <a class="btn btn-primary disabled" role="button"> btn btn-primary disabled </a>
-      <a class="btn btn-primary btn-c" role="button"> btn btn-primary btn-c </a>
-      <br>
-        <div class="col-sm-4 text-center">
-          <div class="panel panel-primary">
-            <div class="panel-heading panel-c"> panel-heading panel-c </div>
-            <div class="panel-body"> panel-body </div>
-            <div class="panel-footer panel-c">
-              panel-footer panel-c
-            </div>
-          </div>
+      <div class="well">
+        <h3> Contact Me </h3>
+        <p> This is currently a Work in progress, and does not work </p>
+        <p> If you would like to contact me, contact me at wmcdonald2k.git@gmail.com </p>
+        <a href="contact/index.php" class="btn btn-primary disabled" role="button"> Form </a>
       </div>
+    </div>
+        <!-- Middle -->
+		<div class="col-sm-8 text-center">
+      <p> My intial plan was to do the TriTech Cyber Security course for 2 years, but my second year, I decided to go with the health course instead.</p>
+      <p> I went with the health program instead my second year so that I didn't have to worry about taking health during the school year at my High School. </p>
+      <a href="tt2016.html" class="btn btn-primary btn-c" role="button"> Link to list of what I learned from TriTech </a>
     </div>
             <!-- Right -->
       <div class="col-sm-2 sidenav">
-        <h3> Previous Placings in Competitions </h3>
-        <p> No placings yet, but I hope to be participating in picoctf 2017. </p>
+        <div class="well">
+          <h3> Previous Placings in Competitions </h3>
+          <p> No placings yet, but I hope to be participating in picoctf 2017. </p>
+        </div>
       </div>
     </div>
   </div>

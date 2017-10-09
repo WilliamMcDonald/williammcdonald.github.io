@@ -5,11 +5,11 @@
   <title> William McDonald: Template </title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="css/bootstrap.min.css">
-  <link rel="stylesheet" href="css/custom.min.css">
-  <link rel="stylesheet" href="css/nat.css">
-  <script src="js/jquery.min.js"></script>
-  <script src="js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="../../css/bootstrap.min.css">
+  <link rel="stylesheet" href="../../css/custom.min.css">
+  <link rel="stylesheet" href="../../css/nat.css">
+  <script src="../../js/jquery.min.js"></script>
+  <script src="../../js/bootstrap.min.js"></script>
 
 </head>
 <body>
@@ -28,7 +28,7 @@
 		<ul class="nav navbar-nav">
 			<li><a href="index.html"> Home </a></li>
 			<li><a href="about.html"> About Me </a></li>
-			<li><a href="tritech/tt2016.html"> Tritech Summer School </a></li>
+			<li><a href="tritech/index.php"> Tritech Summer School </a></li>
 			<li><a href="https://github.com/WilliamMcDonald"> Github </a></li>
 			<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#"> Github Repositories <span class="caret"></span></a>
 				<ul class="dropdown-menu">
@@ -90,28 +90,13 @@ $(document).ready(function(){
       <a href="contact/index.php" class="btn btn-primary disabled" role="button"> Form </a>
 		</div>
         <!-- Middle -->
-		<div class="col-sm-8 text-left">
-      <p> This is just a template to test out links and / or css changes. Feel free to use this layout for your own website. </p>
-      <p> No need to give me credit, but it is appreciated if you do. </p>
-      <p> Thank you and Auf Wiedersehen! </p>
-      <br>
-      <h1> H1 Test </h1>
-      <h2> H2 Test </h2>
-      <h3> H3 Test </h3>
-      <h4> H4 Test </h4>
-      <h5> H5 Test </h5>
-      <a class="btn btn-primary disabled" role="button"> btn btn-primary disabled </a>
-      <a class="btn btn-primary btn-c" role="button"> btn btn-primary btn-c </a>
-      <br>
-        <div class="col-sm-4 text-center">
-          <div class="panel panel-primary">
-            <div class="panel-heading panel-c"> panel-heading panel-c </div>
-            <div class="panel-body"> panel-body </div>
-            <div class="panel-footer panel-c">
-              panel-footer panel-c
-            </div>
-          </div>
-      </div>
+		<div class="col-sm-8 text-center">
+      <h3> Instructions </h3>
+        <p> We found a program that is hiding a flag but requires you to guess the number it is thinking of. Chances are Linux has an easy way to try all the numbers... Go to /problems/995871fcb203d3e223e9e4aaa65e4053 and try it out! </p>
+      <h3> Hints </h3>
+        <p> Hints: Either use SSH or use the Web Shell to get onto the shell server and navigate to the correct directory. Then do a quick Google search on 'bash loops'. You may need to use grep to filter out the responses as well! </p>
+      <h3> Solution </h3>
+        <p> The only tricky part to this one was that I was an imbecile and tried to make a python loop, instead of a bash loop. I kept trying to either run a python file or run the python in the terminal. The command I used was "for i in {1..4096}; do ./bashloop $i ; done". I did CTRL-C once I saw a longer line than everything else, and boop boop kachoop, there was the flag. </p>
     </div>
             <!-- Right -->
       <div class="col-sm-2 sidenav">

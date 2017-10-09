@@ -2,14 +2,14 @@
 <html>
   <!--- 2071124516 --->
 <head>
-  <title> William McDonald: Template </title>
+  <title> William McDonald: Digital Camouflage </title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="css/bootstrap.min.css">
-  <link rel="stylesheet" href="css/custom.min.css">
-  <link rel="stylesheet" href="css/nat.css">
-  <script src="js/jquery.min.js"></script>
-  <script src="js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="../../css/bootstrap.min.css">
+  <link rel="stylesheet" href="../../css/custom.min.css">
+  <link rel="stylesheet" href="../../css/nat.css">
+  <script src="../../js/jquery.min.js"></script>
+  <script src="../../js/bootstrap.min.js"></script>
 
 </head>
 <body>
@@ -26,9 +26,9 @@
 		</div>
 		<div class="collapse navbar-collapse" id="myNavbar">
 		<ul class="nav navbar-nav">
-			<li><a href="index.html"> Home </a></li>
-			<li><a href="about.html"> About Me </a></li>
-			<li><a href="tritech/tt2016.html"> Tritech Summer School </a></li>
+			<li><a href="../index.html"> Home </a></li>
+			<li><a href="../about.html"> About Me </a></li>
+			<li><a href="../tritech/index.php"> Tritech Summer School </a></li>
 			<li><a href="https://github.com/WilliamMcDonald"> Github </a></li>
 			<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#"> Github Repositories <span class="caret"></span></a>
 				<ul class="dropdown-menu">
@@ -90,28 +90,14 @@ $(document).ready(function(){
       <a href="contact/index.php" class="btn btn-primary disabled" role="button"> Form </a>
 		</div>
         <!-- Middle -->
-		<div class="col-sm-8 text-left">
-      <p> This is just a template to test out links and / or css changes. Feel free to use this layout for your own website. </p>
-      <p> No need to give me credit, but it is appreciated if you do. </p>
-      <p> Thank you and Auf Wiedersehen! </p>
-      <br>
-      <h1> H1 Test </h1>
-      <h2> H2 Test </h2>
-      <h3> H3 Test </h3>
-      <h4> H4 Test </h4>
-      <h5> H5 Test </h5>
-      <a class="btn btn-primary disabled" role="button"> btn btn-primary disabled </a>
-      <a class="btn btn-primary btn-c" role="button"> btn btn-primary btn-c </a>
-      <br>
-        <div class="col-sm-4 text-center">
-          <div class="panel panel-primary">
-            <div class="panel-heading panel-c"> panel-heading panel-c </div>
-            <div class="panel-body"> panel-body </div>
-            <div class="panel-footer panel-c">
-              panel-footer panel-c
-            </div>
-          </div>
-      </div>
+		<div class="col-sm-8 text-center">
+      <h3> Instructions </h3>
+        <p> We need to gain access to some routers. Let's try and see if we can find the password in the captured network data: <a href="problemfiles/DigitalCamouflage/data.pcap" target=_blank> data.pcap. </a> </p>
+      <h3> Hints </h3>
+        <p> It looks like someone logged in with their password earlier. Where would log in data be located in a network capture? </p>
+        <p> If you think you found the flag, but it doesn't work, consider that the data may be encrypted. </p>
+      <h3> Solution </h3>
+        <p> Digital Camouflage was the first challenge I tackled. It was probably the easiest I have faced at this point. All I did was I opened up the pcap in wireshark and looked for an entry that said "POST". I have had enough experience to realize that this is a login request. So I followed the TCP stream and found the password... encoded. I though it was a full on encryption, so I ran it through some of my decryption programs, to no avail. Props to my friend Seth for showing me that it wasn't an encryption, but just encoded in base 64.
     </div>
             <!-- Right -->
       <div class="col-sm-2 sidenav">

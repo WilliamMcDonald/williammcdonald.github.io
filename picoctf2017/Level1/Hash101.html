@@ -5,11 +5,11 @@
   <title> William McDonald: Template </title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="css/bootstrap.min.css">
-  <link rel="stylesheet" href="css/custom.min.css">
-  <link rel="stylesheet" href="css/nat.css">
-  <script src="js/jquery.min.js"></script>
-  <script src="js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="../../css/bootstrap.min.css">
+  <link rel="stylesheet" href="../../css/custom.min.css">
+  <link rel="stylesheet" href="../../css/nat.css">
+  <script src="../../js/jquery.min.js"></script>
+  <script src="../../js/bootstrap.min.js"></script>
 
 </head>
 <body>
@@ -28,7 +28,7 @@
 		<ul class="nav navbar-nav">
 			<li><a href="index.html"> Home </a></li>
 			<li><a href="about.html"> About Me </a></li>
-			<li><a href="tritech/tt2016.html"> Tritech Summer School </a></li>
+			<li><a href="tritech/index.php"> Tritech Summer School </a></li>
 			<li><a href="https://github.com/WilliamMcDonald"> Github </a></li>
 			<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#"> Github Repositories <span class="caret"></span></a>
 				<ul class="dropdown-menu">
@@ -90,28 +90,13 @@ $(document).ready(function(){
       <a href="contact/index.php" class="btn btn-primary disabled" role="button"> Form </a>
 		</div>
         <!-- Middle -->
-		<div class="col-sm-8 text-left">
-      <p> This is just a template to test out links and / or css changes. Feel free to use this layout for your own website. </p>
-      <p> No need to give me credit, but it is appreciated if you do. </p>
-      <p> Thank you and Auf Wiedersehen! </p>
-      <br>
-      <h1> H1 Test </h1>
-      <h2> H2 Test </h2>
-      <h3> H3 Test </h3>
-      <h4> H4 Test </h4>
-      <h5> H5 Test </h5>
-      <a class="btn btn-primary disabled" role="button"> btn btn-primary disabled </a>
-      <a class="btn btn-primary btn-c" role="button"> btn btn-primary btn-c </a>
-      <br>
-        <div class="col-sm-4 text-center">
-          <div class="panel panel-primary">
-            <div class="panel-heading panel-c"> panel-heading panel-c </div>
-            <div class="panel-body"> panel-body </div>
-            <div class="panel-footer panel-c">
-              panel-footer panel-c
-            </div>
-          </div>
-      </div>
+		<div class="col-sm-8 text-center">
+      <h3> Instructions </h3>
+        <p> Prove your knowlege of hashes and claim a flag as your prize! Connect to the service at shell2017.picoctf.com:51461 UPDATED 16:12 EST 1 Apr. </p>
+      <h3> Hints </h3>
+        <p> All concepts required to complete this challenge, including simple modular math, are quickly found by googling :) </p>
+      <h3> Solution </h3>
+        <p> This one was more annoying than it was difficult. It felt like every time I went to go copy something back into the terminal, the nc would end. It was as simple as highlighting the prompt, copying it, pasting it into "www.asciitohex.com", and then copying that back into the terminal. Then for the finale, I simply took 32 (space) and added the remainder they wanted. Let's say the prompt was "give me a string that will result in a 15 after being transformed with the mentioned example hashing function." (add up sum of all values of all bytes and modulus 16). I would type '/' (32 + 15 = 47 -> '/') </p>
     </div>
             <!-- Right -->
       <div class="col-sm-2 sidenav">

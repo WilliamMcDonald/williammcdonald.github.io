@@ -5,11 +5,11 @@
   <title> William McDonald: Template </title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="css/bootstrap.min.css">
-  <link rel="stylesheet" href="css/custom.min.css">
-  <link rel="stylesheet" href="css/nat.css">
-  <script src="js/jquery.min.js"></script>
-  <script src="js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="../../css/bootstrap.min.css">
+  <link rel="stylesheet" href="../../css/custom.min.css">
+  <link rel="stylesheet" href="../../css/nat.css">
+  <script src="../../js/jquery.min.js"></script>
+  <script src="../../js/bootstrap.min.js"></script>
 
 </head>
 <body>
@@ -28,7 +28,7 @@
 		<ul class="nav navbar-nav">
 			<li><a href="index.html"> Home </a></li>
 			<li><a href="about.html"> About Me </a></li>
-			<li><a href="tritech/tt2016.html"> Tritech Summer School </a></li>
+			<li><a href="tritech/index.php"> Tritech Summer School </a></li>
 			<li><a href="https://github.com/WilliamMcDonald"> Github </a></li>
 			<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#"> Github Repositories <span class="caret"></span></a>
 				<ul class="dropdown-menu">
@@ -90,28 +90,34 @@ $(document).ready(function(){
       <a href="contact/index.php" class="btn btn-primary disabled" role="button"> Form </a>
 		</div>
         <!-- Middle -->
-		<div class="col-sm-8 text-left">
-      <p> This is just a template to test out links and / or css changes. Feel free to use this layout for your own website. </p>
-      <p> No need to give me credit, but it is appreciated if you do. </p>
-      <p> Thank you and Auf Wiedersehen! </p>
-      <br>
-      <h1> H1 Test </h1>
-      <h2> H2 Test </h2>
-      <h3> H3 Test </h3>
-      <h4> H4 Test </h4>
-      <h5> H5 Test </h5>
-      <a class="btn btn-primary disabled" role="button"> btn btn-primary disabled </a>
-      <a class="btn btn-primary btn-c" role="button"> btn btn-primary btn-c </a>
-      <br>
-        <div class="col-sm-4 text-center">
-          <div class="panel panel-primary">
-            <div class="panel-heading panel-c"> panel-heading panel-c </div>
-            <div class="panel-body"> panel-body </div>
-            <div class="panel-footer panel-c">
-              panel-footer panel-c
-            </div>
-          </div>
-      </div>
+		<div class="col-sm-8 text-center">
+      <h3> Instructions </h3>
+        <p> A program at /problems/fcf3cfa90b13f6ed463d61aa9b4da4ce has access to a flag but refuses to share it. Can you convince it otherwise? </p>
+      <h3> Hints </h3>
+        <p> Check out the difference between relative and absolute paths and see if you can figure out how to use them to solve this challenge. Could you possibly spoof another auth file it looks at instead...? </p>
+      <h3> Solution </h3>
+        <p> I was initially puzzled by this one, but I eventually figured out how to do it. I started out in Home, and made a directory called temp. After entering temp, I made another one also called temp, then moved into it. I made a directory called problems, and moved into it. I made a directory called fcf3cfa90b13f6ed463d61aa9b4da4ce, to match the actual problem, and moved into it. I did the touch command to make a file called auth, and pico'd it to say 'Yes'. I ran the justno file by calling it through '/problems/fcf3cfa90b13f6ed463d61aa9b4da4ce/justno', hoping it reads my auth file, and not it's own. It read mine and I entered the flag. This may be very difficult to read like this, so I will post the exact log of what I did below. </p>
+      <h3> Console Log </h3>
+      <q>
+        vu1c4n@shell-web:~$ mkdir temp
+        vu1c4n@shell-web:~$ cd temp
+        vu1c4n@shell-web:~/temp$ mkdir temp
+        vu1c4n@shell-web:~/temp$ cd temp
+        vu1c4n@shell-web:~/temp/temp$ mkdir problems
+        vu1c4n@shell-web:~/temp/temp$ cd problems/
+        vu1c4n@shell-web:~/temp/temp/problems$ mkdir fcf3cfa90b13f6ed463d61aa9b4da4ce
+        vu1c4n@shell-web:~/temp/temp/problems$ cd fcf3cfa90b13f6ed463d61aa9b4da4ce/
+        vu1c4n@shell-web:~/temp/temp/problems/fcf3cfa90b13f6ed463d61aa9b4da4ce$ cat > auth
+        ^C
+        vu1c4n@shell-web:~/temp/temp/problems/fcf3cfa90b13f6ed463d61aa9b4da4ce$ touch auth
+        vu1c4n@shell-web:~/temp/temp/problems/fcf3cfa90b13f6ed463d61aa9b4da4ce$ ls
+        auth
+        vu1c4n@shell-web:~/temp/temp/problems/fcf3cfa90b13f6ed463d61aa9b4da4ce$ pico auth
+        vu1c4n@shell-web:~/temp/temp/problems/fcf3cfa90b13f6ed463d61aa9b4da4ce$ cat auth
+        Yes
+        vu1c4n@shell-web:~/temp/temp/problems/fcf3cfa90b13f6ed463d61aa9b4da4ce$ /problems/fcf3cfa90b13f6ed463d61aa9b4da4ce/justno
+        Oh. Well the auth file doesn't say no anymore so... Here's the flag: XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+      </q>
     </div>
             <!-- Right -->
       <div class="col-sm-2 sidenav">
