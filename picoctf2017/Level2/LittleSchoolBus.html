@@ -92,11 +92,34 @@ $(document).ready(function(){
         <!-- Middle -->
 		<div class="col-sm-8 text-center">
       <h3> Instructions </h3>
-        <p> We found this annoyingly named directory tree starting at /problems/4ea5ed7e98607104e4504759e0895289. It would be pretty lame to type out all of those directory names but maybe there is something in there worth finding? And maybe we dont need to type out all those names...? Follow the trunk, using cat and ls! </p>
+        <p> Can you help me find the data in this <a href="problemFiles/LittleSchoolBus/littleschoolbus.bmp" target=_blank>littleschoolbus.bmp</a>? </p>
       <h3> Hints </h3>
-        <p> Tab completion is a wonderful, wonderful thing </p>
+        <p> Look at least significant bit encoding!! </p>
       <h3> Solution </h3>
-        <p> Oh boy, this one is simple, and set one up that is further down the list. I have had experience with linux so I knew to just use "find trunk -name 'flag*'". I put the * at the end of flag just in case it was a flag.txt or anything like that. Then all I had to do was cd to the filepath given. The funny part is this is the same way I did Leaf of the Forest. </p>
+        <p> So far, this is one of the most difficult obstacles I have overcame. I have heard of Least Significant Bit Encoding before, but I'd never messed with it. I just finished it, and it took from 3:00 PM Sunday October 8, 2017 until 8:00 pm Sunday October 8, 2017. I'm glad I finally got the right flag. The python code below is what I used to solve it, I know there's no documentation, that is simply because I was just trying to get it done. </p>
+        <p> I will push one with documentation to my github once I get it done. The jist of the code is it offsets the bmp header at the beginning, opens littleschoolbus as an image. It pulls the bytes from the byte array from the image. Then, it offsets it by the header. Finally: it reads the bit and checks if it is between 32 and 126 (printable characters), and adds it to the flag string, and then it prints it. I will eventually make this a variable thing (allow the picture to change and still decode them). If I can figure out how to do that, I feel it will be a great part of my arsenal, and look nice on my Github. Enough rambling, here's the code: </p>
+        <q>
+          BMP_OFFSET = 54
+
+          with open("littleschoolbus.bmp") as img:
+            bytes = bytearray(img.read())
+
+          bytes = bytes[BMP_OFFSET:]
+          print("Pixel length: " + str(len(bytes)))
+
+          flag = ""
+          bits = ""
+
+          for byte in bytes
+            bits += str(byte & 1)
+            if len(bits) == 8:
+              chat = chr(int(bits,2))
+                if ord(char) > 32 and ord(char) < 126:
+                  flag += char
+                bits = ""
+          print("Result: ")
+          print(flag[:45])
+        </q>
     </div>
             <!-- Right -->
       <div class="col-sm-2 sidenav">

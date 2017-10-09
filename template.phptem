@@ -96,12 +96,12 @@ $(document).ready(function(){
       <h3> Hints </h3>
         <p>  </p>
       <h3> Solution </h3>
-        <p>  </p>      
+        <p>  </p>
     </div>
             <!-- Right -->
       <div class="col-sm-2 sidenav">
         <h3> Previous Placings in Competitions </h3>
-        <p> No placings yet, but I hope to be participating in picoctf 2017. </p>
+        <p> No placings yet, but I hope to be participating in picoctf 2018. </p>
       </div>
     </div>
   </div>
