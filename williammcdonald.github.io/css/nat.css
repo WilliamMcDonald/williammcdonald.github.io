@@ -1,0 +1,141 @@
+/* NavBar */
+
+.navbar {
+  margin-bottom 0;
+  color: rgb(255,255,255);
+  background-color: rgb(0,0,0);
+  border: 1px solid white;
+  font-size: 11px;
+  letter-spacing: 2px;
+}
+.nav-tabs li a, .navbar .navbar-brand {
+  color: rgb(150,150,150);
+}
+
+.navbar-nav li a:hover {
+  color: rgb(0,0,150);
+  background-color: rgb(0,0,100);
+}
+
+.navbar-nav li.active a {
+color: rgb(150,150,150); /* 150 */
+background-color: rgb(0,0,0);
+}
+.navbar-default .navbar-toggle {
+  border-color: rgb(0,150,0);
+}
+
+
+
+.dropdown-menu li a:hover {
+  color: rgb(200,200,200);
+  background-color: rgb(150,150,150);
+}
+.open .dropdown-toggle {
+color: rgb(150,150,150);
+background-color: rgb(0,0,0);
+}
+.dropdown-menu li a {
+color: rgb(150,150,150);
+background-color: rgb(100,100,100);
+}
+
+
+
+/* Panel */
+
+.panel-heading.panel-c {
+  color: rgb(120,120,120);
+  background-color: rgb(30,30,30);
+  border-color: rgb(255,255,255);
+}
+.panel-primary {
+  color: rgb(100,100,100);
+  background-color: rgb(20,20,20);
+  border-color: rgb(255,255,255);
+}
+.panel-footer.panel-c {
+  color: rgb(100,100,100);
+  background-color: rgb(40,40,40);
+  border-color: rgb(255,255,255);
+}
+
+/* Button */
+
+.btn-primary.btn-c{
+  color: rgb(200,200,200);
+  background-color: rgb(80,80,80);
+  border-color: rgb(150,150,150);
+}
+.btn-primary.btn-c:hover{
+  color: rgb(255,255,255);
+  background-color: rgb(100,100,100);
+  border-color: rgb(150,150,150);
+}
+
+
+.btn-primary.disabled {
+  color: rgb(200,200,200);
+  background-color: rgb(80,80,80);
+  border-color: rgb(150,150,150);
+}
+.btn-primary.disabled:hover {
+  color: rgb(200,200,200);
+  background-color: rgb(80,80,80);
+  border-color: rgb(150,150,150);
+}
+
+/* Well */
+
+.well {
+  color: rgb(100,100,100);
+  background-color: rgb(10,10,10);
+  border-color: rgb(100,100,100);
+  border-width: 1px;
+}
+
+/* Bod */
+
+body {
+  color: rgb(100,100,100);
+  background-color: rgb(20,20,20);
+}
+
+h1 {
+background-color: rgb(50,50,50);
+color: rgb(0,0,255);
+border: 1px solid white;
+padding: 80px;
+margin: 20px;
+text-align: center;
+}
+
+h2 {
+  color: rgb(255,0,0);
+}
+
+h3 {
+  color: rgb(200,200,200);
+}
+
+h4 {
+  color: rgb(255,255,255);
+}
+
+q {
+  text-align: left;
+}
+
+hr {
+  border: 0;
+  width: 150%;
+  color: rgb(250,0,0);
+  background-color: rgb(250,0,0);
+  height: 5px;
+}
+
+code {
+  color: rgb(200,200,200);
+  background-color: rgb(50,50,50);
+  padding:6px;
+}

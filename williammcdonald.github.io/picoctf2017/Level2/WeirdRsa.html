@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+  <!--- 2071124516 --->
+<head>
+  <title> William McDonald: Template </title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="../../css/bootstrap.min.css">
+  <link rel="stylesheet" href="../../css/custom.min.css">
+  <link rel="stylesheet" href="../../css/nat.css">
+  <script src="../../js/jquery.min.js"></script>
+  <script src="../../js/bootstrap.min.js"></script>
+
+</head>
+<body>
+<!--- add your bootstrap code  below this line--- >
+<!-- This is for navbar -->
+<nav class="navbar navbar-default navbar-fixed-top">
+	<div class="container-fluid">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+		</div>
+		<div class="collapse navbar-collapse" id="myNavbar">
+		<ul class="nav navbar-nav">
+			<li><a href="index.html"> Home </a></li>
+			<li><a href="about.html"> About Me </a></li>
+			<li><a href="tritech/index.html"> Tritech Summer School </a></li>
+			<li><a href="https://github.com/WilliamMcDonald"> Github </a></li>
+			<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#"> Github Repositories <span class="caret"></span></a>
+				<ul class="dropdown-menu">
+					<li><a href="https://github.com/WilliamMcDonald/Arduino"> Arduino </a></a></li>
+					<li><a href="https://github.com/WilliamMcDonald/HTML"> HTML </a></li>
+					<li><a href="https://github.com/WilliamMcDonald/Java"> Java </a></li>
+					<li><a href="https://github.com/WilliamMcDonald/Python"> Python </a></a></li>
+					<li><a href="https://github.com/WilliamMcDonald/williammcdonald.github.io"> Github IO </a></li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+	</div>
+</nav>
+
+
+<!--- end of my code -->
+<!--- do not delete this code -->
+
+<script>
+$(document).ready(function(){
+  // Add scrollspy to <body>
+  $('body').scrollspy({target: ".navbar", offset: 50});
+  // Add smooth scrolling on all links inside the navbar
+  $("#myNavbar a").on('click', function(event) {
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+      // Store hash
+      var hash = this.hash;
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 800, function(){
+
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    }  // End if
+  });
+});
+</script>
+
+
+<div id="header">
+<h1> William McDonald </h1>
+</div>
+
+<!-- the web page layout -->
+<div class="container-fluid text-center">
+	<div class="row content">
+        <!-- Left -->
+		<div class="col-sm-2 sidenav">
+      <h3> Contact Me </h3>
+      <p> This is currently a Work in progress, and does not work </p>
+      <p> If you would like to contact me, contact me at wmcdonald2k.git@gmail.com </p>
+      <a href="contact/index.html" class="btn btn-primary disabled" role="button"> Form </a>
+		</div>
+        <!-- Middle -->
+		<div class="col-sm-8 text-center">
+      <h3> Instructions </h3>
+        <p> We recovered some <a href="problemFiles/WeirdRsa/RSA.txt" target=_blank>data</a>. It was labeled as RSA, but what in the world are "dq" and "dp"? Can you decrypt the ciphertext for us? </p>
+      <h3> Hints </h3>
+        <p> NO HINTS </p>
+      <h3> Solution </h3>
+        <p> At first, I was thrown through a loop, but after some quick wikepedia skimming, I came up with some basic python code: </p>
+        <q>
+          import binascii
+
+          c = 95272795986475189505518980251137003509292621140166383887854853863720692420204142448424074834657149326853553097626486371206617513769930277580823116437975487148956107509247564965652417450550680181691869432067892028368985007229633943149091684419834136214793476910417359537696632874045272326665036717324623992885
+          p = 11387480584909854985125335848240384226653929942757756384489381242206157197986555243995335158328781970310603060671486688856263776452654268043936036556215243
+          q = 12972222875218086547425818961477257915105515705982283726851833508079600460542479267972050216838604649742870515200462359007315431848784163790312424462439629
+          dp = 8191957726161111880866028229950166742224147653136894248088678244548815086744810656765529876284622829884409590596114090872889522887052772791407131880103961
+          dq = 3570695757580148093370242608506191464756425954703930236924583065811730548932270595568088372441809535917032142349986828862994856575730078580414026791444659
+
+          qinv = (1/q) % p
+          m = pow(c, dq, q)
+          print(m)
+          message = binascii.unhexlify(format(m, 'x')).decode()
+          print(message)
+        </q>
+    </div>
+            <!-- Right -->
+      <div class="col-sm-2 sidenav">
+        <h3> Previous Placings in Competitions </h3>
+        <p> No placings yet, but I hope to be participating in picoctf 2018. </p>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

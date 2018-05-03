@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+  <!--- 2071124516 --->
+<head>
+  <title> William McDonald: Template </title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="../../css/bootstrap.min.css">
+  <link rel="stylesheet" href="../../css/custom.min.css">
+  <link rel="stylesheet" href="../../css/nat.css">
+  <script src="../../js/jquery.min.js"></script>
+  <script src="../../js/bootstrap.min.js"></script>
+
+</head>
+<body>
+<!--- add your bootstrap code  below this line--- >
+<!-- This is for navbar -->
+<nav class="navbar navbar-default navbar-fixed-top">
+	<div class="container-fluid">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+		</div>
+		<div class="collapse navbar-collapse" id="myNavbar">
+		<ul class="nav navbar-nav">
+			<li><a href="index.html"> Home </a></li>
+			<li><a href="about.html"> About Me </a></li>
+			<li><a href="tritech/index.html"> Tritech Summer School </a></li>
+			<li><a href="https://github.com/WilliamMcDonald"> Github </a></li>
+			<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#"> Github Repositories <span class="caret"></span></a>
+				<ul class="dropdown-menu">
+					<li><a href="https://github.com/WilliamMcDonald/Arduino"> Arduino </a></a></li>
+					<li><a href="https://github.com/WilliamMcDonald/HTML"> HTML </a></li>
+					<li><a href="https://github.com/WilliamMcDonald/Java"> Java </a></li>
+					<li><a href="https://github.com/WilliamMcDonald/Python"> Python </a></a></li>
+					<li><a href="https://github.com/WilliamMcDonald/williammcdonald.github.io"> Github IO </a></li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+	</div>
+</nav>
+
+
+<!--- end of my code -->
+<!--- do not delete this code -->
+
+<script>
+$(document).ready(function(){
+  // Add scrollspy to <body>
+  $('body').scrollspy({target: ".navbar", offset: 50});
+  // Add smooth scrolling on all links inside the navbar
+  $("#myNavbar a").on('click', function(event) {
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+      // Store hash
+      var hash = this.hash;
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 800, function(){
+
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    }  // End if
+  });
+});
+</script>
+
+
+<div id="header">
+<h1> William McDonald </h1>
+</div>
+
+<!-- the web page layout -->
+<div class="container-fluid text-center">
+	<div class="row content">
+        <!-- Left -->
+		<div class="col-sm-2 sidenav">
+      <h3> Contact Me </h3>
+      <p> This is currently a Work in progress, and does not work </p>
+      <p> If you would like to contact me, contact me at wmcdonald2k.git@gmail.com </p>
+      <a href="contact/index.html" class="btn btn-primary disabled" role="button"> Form </a>
+		</div>
+        <!-- Middle -->
+		<div class="col-sm-8 text-center">
+      <h3> Instructions </h3>
+        <p> We can get into the Administrator's computer with a browser exploit. But first, we need to figure out what browser they're using. Perhaps this information is located in a network packet capture we took: <a href="problemFiles/SpecialAgentUser/data.pcap" target=_blank> data.pcap.</a> Enter the browser and version as "BrowserName BrowserVersion". NOTE: We're just looking for up to 3 levels of subversions for the browser version (ie. Version 1.2.3 for Version 1.2.3.4) and ignore any 0th subversions (ie. 1.2 for 1.2.0) </p>
+      <h3> Hints </h3>
+        <p> Where can we find information on the browser in networking data? Maybe try <a href="http://www.useragentstring.com./" target=_blank>reading up on user-agent strings</a>. </p>
+      <h3> Solution </h3>
+        <p> Special Agent User was a lot like Digital Camouflage. I did not use the same TCP Stream even though I had just finished Digital Camouflage, because I honestly didn't realize that the browser would show in there, I guess I didn't look hard enough. I searched for a "GET" tag in the info and found one right away. When I looked into it, I found what I was looking for right at the top: Firefox/25.0 ... except I didn't realize it. I don't remember exactly what the flag was, but I do remember how difficult it was to figure out the exact way it was supposed to be entered. </p>
+    </div>
+            <!-- Right -->
+      <div class="col-sm-2 sidenav">
+        <h3> Previous Placings in Competitions </h3>
+        <p> No placings yet, but I hope to be participating in picoctf 2018. </p>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

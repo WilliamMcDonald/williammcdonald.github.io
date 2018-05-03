@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html>
+  <!--- 2071125016 --->
+<head>
+  <title> William McDonald </title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="../css/bootstrap.min.css">
+  <link rel="stylesheet" href="../css/custom.min.css">
+  <link rel="stylesheet" href="../css/nat.css">
+  <script src="../js/jquery.min.js"></script>
+  <script src="../js/bootstrap.min.js"></script>
+
+</head>
+<body>
+<!--- add your bootstrap code  below this line --->
+
+<nav class="navbar navbar-default navbar-fixed-top">
+	<div class="container-fluid">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+		</div>
+		<div class="collapse navbar-collapse" id="myNavbar">
+		<ul class="nav navbar-nav">
+			<li><a href="../index.html"> Home </a></li>
+			<li><a href="../about.html"> About Me </a></li>
+			<li><a href="index.html"> Tritech Summer School </a></li>
+			<li><a href="https://github.com/WilliamMcDonald"> Github </a></li>
+			<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#"> Github Repositories <span class="caret"></span></a>
+				<ul class="dropdown-menu">
+					<li><a href="https://github.com/WilliamMcDonald/Arduino"> Arduino </a></a></li>
+					<li><a href="https://github.com/WilliamMcDonald/HTML"> HTML </a></li>
+					<li><a href="https://github.com/WilliamMcDonald/Java"> Java </a></li>
+					<li><a href="https://github.com/WilliamMcDonald/Python"> Python </a></a></li>
+					<li><a href="https://github.com/WilliamMcDonald/williammcdonald.github.io"> Github IO </a></li>
+				</ul>
+			</li>
+			<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#"> Class Days <span class="caret"></span></a>
+				<ul class="dropdown-menu">
+					<li><a href="#D1"> Day 1 </a></li>
+					<li><a href="#D2"> Day 2  </a></li>
+					<li><a href="#D3"> Day 3  </a></li>
+					<li><a href="#D4"> Day 4  </a></li>
+					<li><a href="#D5"> Day 5  </a></li>
+					<li><a href="#D6"> Day 6  </a></li>
+					<li><a href="#D7"> Day 7  </a></li>
+					<li><a href="#D8"> Day 8  </a></li>
+					<li><a href="#D9"> Day 9  </a></li>
+					<li><a href="#D10"> Day 10  </a></li>
+					<li><a href="#D11"> Day 11  </a></li>
+					<li><a href="#D12"> Day 12  </a></li>
+					<li><a href="#D13"> Day 13  </a></li>
+					<li><a href="#D14"> Day 14  </a></li>
+				</ul>
+			</li>
+			<li><a href="#Top"> Top </a></li>
+		</ul>
+	</div>
+	</div>
+</nav>
+
+<!--- end of my code -->
+<!--- do not delete this code -->
+
+<script>
+$(document).ready(function(){
+  // Add scrollspy to <body>
+  $('body').scrollspy({target: ".navbar", offset: 50});
+  // Add smooth scrolling on all links inside the navbar
+  $("#myNavbar a").on('click', function(event) {
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+      // Store hash
+      var hash = this.hash;
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 800, function(){
+
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    }  // End if
+  });
+});
+</script>
+
+
+<div id="header">
+  <h1 id="Top"> William McDonald </h1>
+</div>
+
+<!-- Web Layout -->
+<div class="container-gluid text-center">
+    <div class="row content">
+          <!-- Left -->
+        <div class="col-sm-2 sidenav">
+          <div class="well">
+            <h3> Contact Me </h3>
+            <p> This is currently a Work in progress, and does not work </p>
+            <p> If you would like to contact me, contact me at wmcdonald2k.git@gmail.com </p>
+            <a href="contact/index.html" class="btn btn-primary disabled" role="button"> Form </a>
+          </div>
+        </div>
+          <!-- Middle -->
+        <div class="col-sm-8 text-left">
+          <h2 id="D1"> Quick Notes </h2>													<!-- Quick Notes -->
+          <ul>
+          <li> '$' means not root </li>
+          <li> '#' means in root </li>
+          <li> '--' means a break in the occurance of the use of the command. </li>
+          </ul>
+
+          <h2> Day 1 </h2> 											<!-- Day 1 -->
+
+          	<ol type="I">
+          	<li> Introductions </li>
+          	<li> Build a network </li>
+          	<li> Computer hardware </li>
+          	<li> System Rescue CD </li>
+          	<li> Basic Linuz Command LIne </li>
+          	<li> File-Systems </li>
+          	<li> Centos 7 usb Install </li>
+          	<li> w3schools (html) - Start making a web page </li>
+          	</ol>
+
+          	<h3> Linux Basic Terminal Commands </h3>
+          		<ul>
+          		<li> $clear </li>
+          			<ul><li> Clears the terminal screen </li></ul>
+          		<li> $pwd </li>
+          			<ul><li> Shows current Path </li></ul>
+          		<li> $ls </li>
+          			<ul><li> Shows all files in current Directory </li></ul>
+          		<li> $nmap -sP [IP address] </li>
+          			<ul><li> Maps current Network on IP (Caution) </li></ul>
+          		<li> $arp -a </li>
+          			<ul><li> Lists users in current directory </li></ul>
+          		<li> $python </li>
+          			<ul><li> Allows to use Python code in terminal </li></ul>
+          		<li> $ping [IP address] </li>
+          			<ul><li> Pings an IP address </li></ul>
+          		<li> $ssh -l [file] [IP address] </li>
+          			<ul><li> SSHs the file location on the IP address </li></ul>
+          		<li> $ssh -l [userName] [IP address] </li>
+          			<ul><li> Same as previous exept for user </li></ul>
+          		<li> $nano [fileName].txt </li>
+          			<ul><li> Opens the text file using Nano </li></ul>
+          		<li> $cat [fileName].txt </li>
+          			<ul><li> Displays the text file in the terminal window </li></ul>
+          		<li> $more [fileName].txt </li>
+          			<ul><li> Currently unknown </li></ul>
+          		</ul>
+
+          	<h3 id="D2"> Root Commands </h3>
+          		<ul>
+          		<li> #useradd -m -d [path] [file] </li>
+          			<ul><li> Adds user to path for file </li></ul>
+          		<li> #passwd [file] </li>
+          			<ul><li> Changes password for file </li></ul>
+          		</ul>
+
+          <h2> Day 2 </h2>												<!-- Day 2 -->
+
+          	<ol type = "I">
+          	<li> Learned how to become Root </li>
+          	<li> Learned about Firewalls </li>
+          	<li> Filled the Taskbar </li>
+          	<li> Installed Gnome Browser Plugin </li>
+          	<li> Istalled Frippery Panel Favorites </li>
+          	<li> Downloaded Chrome </li>
+          	<li> Skipped Alacarte </li>
+          	<li> Disabled selinux to develop a server without using selinux </li>
+          	</ol>
+
+          	<h3 id="D3"> Advanced Terminal Commands </h3>
+          		<ul>
+          		<li> $ chmod 755 * </li>
+          			<ul><li> Changes permissions of the current directory </li></ul>
+          		<li> $ chmod 755 -R [filename] </li>
+          			<ul><li> Same as previous, only recursively </li></ul>
+          		</ul>
+
+          <h2> Day 3 </h2>												<!-- Day 3 -->
+
+          		<ol type="I">
+          		<li> Install FTP </li>
+          		<li> Install FileZilla </li>
+          		<li> CHange permissinos for Arduino, wireshare and wheel </li>
+          		<li> Github intro </li>
+          		<li> Python intro </li>
+          		<li> Moar HTML </li>
+          		<li> Bootstrap </li>
+          		<li> HTML Websites </li>
+          		<li> Teamwork Activity: Relay race, Blind thing, "Never have I ever"</li>
+          		<li> HTML color notes </li>
+          		<li> Uploaded my Fibonacci Sequence onto GitHub </li>
+          		</ol>
+
+          	<h3> More Terminal Commands </h3>
+          		<ul>
+          		<li> python [filename].py </li>
+          			<ul><li> Runs a python script </li></ul>
+          		</ul>
+
+          	<h3> Python Scrips ran </h3>
+          		<p>
+          		print("Hello World")
+          		<br> --
+          		<br> 2 * 3
+          		<br> --
+          		<br> 2 * 3 * 4
+          		<br> --
+          		<br> 2 * 3 * 4 * 5
+          		<br> --
+          		<br> 2 ** 0
+          		<br> --
+          		<br> 2 ** 16
+          		<br> --
+          		<br> z = 1
+          		<br> b = 3
+          		<br> z * b
+          		<br> --
+          		<br> for x in range (0,9):
+          		<br> 	print("Hello World!")
+          		<br> --
+          		<br><i> My personal Fibonacci Code: </i>
+          		<br> #!/usr/bin/python
+          		<br>
+          		<br> option = int(input("What version would you like? 1? or 2?"))
+          		<br>
+          		<br> if option == 1:
+          		<br>
+          		<br>	n = int(input("What place element would you like to see?"))
+          		<br>
+          		<br>	a = 0
+          		<br>	b = 1
+          		<br>
+          		<br>	for i in range(0, n):
+          		<br>		temp = a
+          		<br>		a = b
+          		<br>		b = temp + b
+          		<br>
+          		<br>	print("The " + str(n) + "th element is " + str(a))
+          		<br> else:
+          		<br>
+          		<br>	n = int(input("How many elements of the sequence would you like to see?"))
+          		<br>
+          		<br>	a = 0
+          		<br>	b = 1
+          		<br>	sequence = ""
+          		<br>
+          		<br>	for i in range(0, n):
+          		<br>		temp = a
+          		<br>		a = b
+          		<br>		b = temp + b
+          		<br>		sequence = sequence + str(a) + " "
+          		<br id="D4">
+          		<br>	print("The first " + str(n) + " elements are: " + sequence)
+          		</p>
+
+
+
+          <h2> Day 4 </h2>												<!-- Day 4 -->
+          		<ol type="I">
+          		<li> C (Hello World) </li>
+          		<li> SystemCTL </li>
+          		<li> SystemCTL Grep </li>
+          		<li> SSH </li>
+          		<li> Apache (httpd)</li>
+          		<li> Mariadb </li>
+          		<li> PHP</li>
+          		<li> Download (jessie) https://www.raspberrypi.org/downloads/</li>
+          		</ol>
+
+          	<h3> Terminal Commands </h3>
+          		<ul>
+          		<li> crontab -e </li>
+          			<ul><li> Unknown for now </li></ul>
+          		<li> systemctl </li>
+          			<ul><li> displays System information </li></ul>
+          		<li> top </li>
+          			<ul><li> goes to top </li></ul>
+          		<li> systemctl | grep firewall </li>
+          			<ul><li> shows firewall information </li></ul>
+          		<li> systemctl | stop firewalld </li>
+          			<ul><li> stops firewall </li></ul>
+          		<li> systemctl | grep httpd </li>
+          			<ul><li> shows Apache information </li></ul>
+          		<li> systemctl stop httpd </li>
+          			<ul><li> stops apache </li></ul>
+          		<li> systemctl start httpd </li>
+          			<ul><li> starts apache </li></ul>
+          		<li> systemctl enable httpd </li>
+          			<ul><li> enables Apache </li></ul>
+          		</ul>
+
+          	<h3> C Scripts </h3>
+          		// save this file as hello.c in a folder called "ccode"
+          		<br> // compile with $gcc hello.c -o hello
+          		<br> // run with the command:  $./hello
+
+          		<br> #include<stdio.h>
+
+          		<br> main()
+          		<br> {
+          		<br> 	int i;
+          		<br> 	printf("Hello World");
+          		<br> 	for (i=0 ; i < 10; i++) {
+          		<br> 		printf("%d Hello World \n" , i);
+          		<br> 	}
+          		<br> }
+
+          	<h3> Create your own Local Host server </h3>
+          		<br># crontab -e (not chrontab -e)
+          		<br># systemctl
+          		<br># top
+
+          		<br># systemctl | grep firewall
+          		<br>	displays status on firewall
+          		<br># systemctl stop firewalld
+          		<br>	stops firewall
+
+          		<br> # yum install httpd
+          		<br> 	installs apache
+
+          		<br> # systemctl | grep httpd
+          		<br> # systemctl stop httpd
+          		<br> 	stops apache
+          		<br> # systemctl start httpd
+          		<br> starts apache
+          		<br> # systemctl enable httpd
+          		<br> 	loads apache automatically
+          		<br>
+
+
+          		<br> # mkdir /ztemp
+          		<br> # cd /etc/httpd/conf
+          		<br> # cp httpd.conf /ztmp
+          		<br> # nano -c httpd.conf
+          		<ul>
+          		<li> change so it works for your system </li>
+          		<li> change line 119 (DocumentRoot line) to /home/[yourusername]/html </li>
+          		<li> change line 124 to /home/[yourusername]/html </li>
+          		<li> change line 131 to /home/[yourusername]/html </li>
+          		</ul>
+          		<br> # systemctl restart httpd
+          		<br> 'Check local host'
+          		<br> 'Firewall must be off'
+
+          		<br> DO NOT BE ROOT
+          		<br> $ cd /home
+          		<br> $ ll
+          		<br id="D5"> $ chmod 755 -Rf *
+          		<br> 'check localhost'
+
+          <h2> Day 5 </h2>												<!-- Day 5 -->
+          		<ol type="I">
+          		<li> yum update </li>
+          		<li> yum install gimp </li>
+          		<li> vi vim introduction </li>
+          		<li> bash </li>
+          		<li> crontabs </li>
+          		<li> Traffic Logs </li>
+          		<li> Oracle java (jre jdk) </li>
+          		<li> Hello.java (Hello World) </li>
+          		<li> Firefox (java jre) </li>
+          		<li> http://tritechsc.org/xfunctions/ </li>
+          		<li> github.com repos: linux,bash,java,python,ccode,html... </li>
+          		<li> Send note home to take Cadwell walk. </li>
+          		<li> Raspberry Pi sd card dd command. </li>
+          		</ol>
+
+          		<h3> Command line Commands </h3>
+          			<ul>
+          			<li> cp -r [file to be copied] [where you want file copied to] </li>
+          				<ul><li> Copies file to be copied recurisvely to where you want it to be copied to. </li></ul>
+          			<li> crontab -l </li>
+          				<ul><li> checks to see if user/root has a crontab. </li></ul>
+          			<li> crontab -e </li>
+          				<ul><li> installs new crontab </li></ul>
+          			<li id="D6"> crontab [crontab file name] </li>
+          				<ul><li> runs crontab file name as a crontab </li></ul>
+          			<li> # rpm -Uvh [filename.rpm] </li>
+          				<ul><li> Installs .rpm file using Redhat Program Manager. </li></ul>
+          			</ul>
+
+          <h2> Day 6 </h2>												<!-- Day 6 -->
+          		<ol type="I">
+          		<li> <u> Rise of the Hackers </u> (Movie) </li>
+          		<li> Wofram Alpha </li>
+          		<li> Random Numbers </li>
+          		<li> LowToMin.java </li>
+          		<li id="D7"> Github </li>
+          		<li> Raspberry Pis </li>
+          		</ol>
+
+          <h2> Day 7 </h2>												<!-- Day 7 -->
+          		<ol type="I">
+          		<li> Review java </li>
+          		<li> Nodejs </li>
+          		<li> Java Script Sorting Program </li>
+          		<li id="D8"> github.com (login) </li>
+          		<li> nodeschool.oi </li>
+          		<li> 1:15 pm - Goto Cadwell </li>
+          		</ol>
+
+           <h2> Day 8 </h2>												<!-- Day 8 -->
+          		<ol type="I">
+          		<li> 568B Wiring </li>
+          		<li> Rj45 Modular Jacks </li>
+          		<li> Arduino </li>
+          		<li id="D9"> Circuits </li>
+          		<li> Minecraft Hacking </li>
+          		<li> Raspberry Pi development </li>
+          		</ol>
+
+          <h2> Day 9 </h2>												<!-- Day 9 -->
+          		<ol type="I">
+          		<li> Code in "https://www.codecademy.com/" </li>
+          		<ul><li> Keep track of points. This is part of the grade. </li></ul>
+          		<li id="D10"> Work on github site and use blender. </li>
+          		<li> No 3d Printing </li>
+          		</ol>
+
+          <h2> Day 10 </h2>												<!-- Day 10 -->
+          		<ol type="I">
+          		<li> 568B Wiring </li>
+          		<li> RJ45 Modular Jacks (Demo)</li>
+          		<li> Clean up </li>
+          		<li> Codecademy.org </li>
+          		<li> Scratch </li>
+          		<li> app inventor (just look) </li>
+          		<li> Bootstrap to github (username.github.io) </li>
+          		<li> Add group to user for wireshark </li>
+          		<li id="D11"> Wireshark </li>
+          		<li> Download Ubuntu </li>
+          		</ol>
+
+          <h2> Day 11 </h2>												<!-- Day 11 -->
+          		<ol type="I">
+          		<li id="D12"> Worked on Github websites. </li>
+          		</ol>
+
+          <h2> Day 12 </h2>												<!-- Day 12 -->
+          		<ol type="I">
+          		<li> Windows 10 installation. </li>
+          		<li> Arduino  </li>
+          		<li> Nodejs </li>
+          		<li> Git </li>
+          		<li> Blender </li>
+          		<li> Inkscape </li>
+          		<li> Gimp </li>
+          		<li> JRE </li>
+          		<li id="D13"> Notepad ++ </li>
+          		<li> OBS </li>
+          		<li> Wireshark </li>
+          		</ol>
+
+
+          <h2> Day 13 </h2>												<!-- Day 13 -->
+          		<ol type="I">
+          		<li> Oracle Java Windows Install </li>
+          		<li> Set Classpath for Java. </li>
+          		<li> PowerShell Command </li>
+          		<li> Hello World </li>
+          		<li id="D14"> JRE </li>
+          		<li> Cygwin Install </li>
+          		</ol>
+
+          <h2> Day 14 </h2>												<!-- Day 14 -->
+          		<ol type="I">
+          		<li> Complete Projects </li>
+          		<li> user.github.io </li>
+          		<li> github.com/user (lists 5 populated repos) </li>
+          		<li> Autonomy Time. </li>
+          		</ol>
+
+        </div>
+          <!-- Right -->
+        <div class="col-sm-2 sidenav">
+          <div class="well">
+            <h3> Previous Placings in Competitions </h3>
+      			<p> No placings yet, but I hope to be participating in picoctf 2018. </p>
+          </div>
+        </div>
+
+
+
+</body>
+</html>

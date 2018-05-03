@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+  <!--- 2071124516 --->
+<head>
+  <title> William McDonald: Template </title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="../css/bootstrap.min.css">
+  <link rel="stylesheet" href="../css/custom.min.css">
+  <link rel="stylesheet" href="../css/nat.css">
+  <script src="../js/jquery.min.js"></script>
+  <script src="../js/bootstrap.min.js"></script>
+
+</head>
+<body>
+<!--- add your bootstrap code  below this line--- >
+<!-- This is for navbar -->
+<nav class="navbar navbar-default navbar-fixed-top">
+	<div class="container-fluid">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+		</div>
+		<div class="collapse navbar-collapse" id="myNavbar">
+		<ul class="nav navbar-nav">
+			<li><a href="../index.html"> Home </a></li>
+			<li><a href="about.html"> About Me </a></li>
+			<li><a href="tritech/tt2016.html"> Tritech Summer School </a></li>
+			<li><a href="https://github.com/WilliamMcDonald"> Github </a></li>
+			<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#"> Github Repositories <span class="caret"></span></a>
+				<ul class="dropdown-menu">
+					<li><a href="https://github.com/WilliamMcDonald/Arduino"> Arduino </a></a></li>
+					<li><a href="https://github.com/WilliamMcDonald/HTML"> HTML </a></li>
+					<li><a href="https://github.com/WilliamMcDonald/Java"> Java </a></li>
+					<li><a href="https://github.com/WilliamMcDonald/Python"> Python </a></a></li>
+					<li><a href="https://github.com/WilliamMcDonald/williammcdonald.github.io"> Github IO </a></li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+	</div>
+</nav>
+
+
+<!--- end of my code -->
+<!--- do not delete this code -->
+
+<script>
+$(document).ready(function(){
+  // Add scrollspy to <body>
+  $('body').scrollspy({target: ".navbar", offset: 50});
+  // Add smooth scrolling on all links inside the navbar
+  $("#myNavbar a").on('click', function(event) {
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+      // Store hash
+      var hash = this.hash;
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 800, function(){
+
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    }  // End if
+  });
+});
+</script>
+
+
+<div id="header">
+<h1> William McDonald </h1>
+</div>
+
+<!-- the web page layout -->
+<div class="container-fluid text-center">
+	<div class="row content">
+        <!-- Left -->
+		<div class="col-sm-2 sidenav">
+      <div class="well">
+        <h3> Contact Me </h3>
+        <p> This is currently a Work in progress, and does not work </p>
+        <p> If you would like to contact me, contact me at wmcdonald2k.git@gmail.com </p>
+        <a href="contact/index.html" class="btn btn-primary disabled" role="button"> Form </a>
+      </div>
+    </div>
+        <!-- Middle -->
+		<div class="col-sm-8 text-center">
+      <p> My intial plan was to do the TriTech Cyber Security course for 2 years, but my second year, I decided to go with the health course instead.</p>
+      <p> I went with the health program instead my second year so that I didn't have to worry about taking health during the school year at my High School. </p>
+      <a href="tt2016.html" class="btn btn-primary btn-c" role="button"> Link to list of what I learned from TriTech </a>
+    </div>
+            <!-- Right -->
+      <div class="col-sm-2 sidenav">
+        <div class="well">
+          <h3> Previous Placings in Competitions </h3>
+          <p> No placings yet, but I hope to be participating in picoctf 2018. </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
