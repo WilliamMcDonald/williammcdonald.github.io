@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+  <!--- 2071124516 --->
+<head>
+  <title> William McDonald: homeprint.py </title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="../../../css/bootstrap.min.css">
+  <link rel="stylesheet" href="../../../css/custom.min.css">
+  <link rel="stylesheet" href="../../../css/nat.css">
+  <script src="../../../js/jquery.min.js"></script>
+  <script src="../../../js/bootstrap.min.js"></script>
+
+</head>
+<body>
+<!--- add your bootstrap code  below this line--- >
+<!-- This is for navbar -->
+<nav class="navbar navbar-default navbar-fixed-top">
+	<div class="container-fluid">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+		</div>
+		<div class="collapse navbar-collapse" id="myNavbar">
+		<ul class="nav navbar-nav">
+			<li><a href="index.html"> Home </a></li>
+			<li><a href="about.html"> About Me </a></li>
+			<li><a href="https://github.com/WilliamMcDonald"> Github </a></li>
+			<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#"> Github Repositories <span class="caret"></span></a>
+				<ul class="dropdown-menu">
+					<li><a href="https://github.com/WilliamMcDonald/Arduino"> Arduino </a></a></li>
+					<li><a href="https://github.com/WilliamMcDonald/HTML"> HTML </a></li>
+					<li><a href="https://github.com/WilliamMcDonald/Java"> Java </a></li>
+					<li><a href="https://github.com/WilliamMcDonald/Python"> Python </a></a></li>
+					<li><a href="https://github.com/WilliamMcDonald/williammcdonald.github.io"> Github IO </a></li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+	</div>
+</nav>
+
+<!--- end of my code -->
+<!--- do not delete this code -->
+
+<script>
+$(document).ready(function(){
+  // Add scrollspy to <body>
+  $('body').scrollspy({target: ".navbar", offset: 50});
+  // Add smooth scrolling on all links inside the navbar
+  $("#myNavbar a").on('click', function(event) {
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+      // Store hash
+      var hash = this.hash;
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 800, function(){
+
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    }  // End if
+  });
+});
+</script>
+
+
+<div id="header">
+  <h1> William McDonald </h1>
+</div>
+
+<!-- the web page layout -->
+<div class="container-fluid text-center">
+	<div class="row content">
+      <!-- Left -->
+      <div class="col-sm-2 sidenav">
+        <div class="well">
+          <h3> Contact Me </h3>
+          <p> If you would like to contact me, contact me at vulcanroot@protonmail.ch </p>
+        </div>
+      </div>
+        <!-- Middle -->
+		<div class="col-sm-8 text-center">
+      <h3> Goal </h3>
+        <p> I was not sure if it was possible, so I figured it would be worth a shot to see if I could make it. </p>
+      <h3> Challenges </h3>
+        <p> There were a lot of them. I had to find out how you would do it manually - it was not easy in the slightest. I remembered that IPs are assigned by the router based off of MAC address, so I knew that needed to change. The hardest part was trying to find out how to do a release/renew on linux - you have to use 'dhclient'. It was only difficult because I was not sure if it was possible, had I known what I know now, it would have been really simple. </p>
+    </div>
+    <!-- Right -->
+    <div class="col-sm-2 sidenav">
+      <div class="well">
+			     <h3> Education </h3>
+			     <p> HS: Kennewick High School Class of 2018 </p>
+      </div>
+    </div>
+  </div>
+  <div class="row content">
+    <h3> Breakdown </h3>
+      <div class="col-sm-1">
+      </div>
+      <div class="col-sm-10 text-left">
+        <p> The first two lines denote the file name, version number, and the author (me). </p>
+
+          <code> # CHANGER.PY ZWEI NULL - 4/24 </code> <br>
+          <code> # Made by William "Vulcan" McDonald. </code> <br>
+          <br>
+
+        <p> The next set of lines import the packages required: subprocess and time. </p>
+
+          <code> import subprocess </code> <br>
+          <code> from subprocess import call </code> <br>
+          <code> import time </code> <br>
+          <code> from time import sleep </code> <br>
+          <br>
+
+        <p> I declare the variable 'interface' to store the interface that I will change. </p>
+
+          <code> # Change value to your interface. </code> <br>
+          <code> interface = 'wlo1' </code> <br>
+          <br>
+
+        <p> It then starts an infinite loop that starts off by letting the user know the IP is being changed. </p>
+
+          <code> while True: </code> <br>
+          <code> &emsp; print('# # # # # # #') </code> <br>
+          <code> &emsp; print('# CHANGING  #') </code> <br>
+          <code> &emsp; print('# # # # # # #') </code> <br>
+          <br>
+
+      <p> In the infinite loop, the first step is to change the MAC Address using macchanger. </p>
+
+        <code> &emsp; # Changes MAC Address </code> <br>
+        <code> &emsp; call(['ifconfig', interface, 'down']) </code> <br>
+        <code> &emsp; call(['macchanger', '-r', interface]) </code> <br>
+        <code> &emsp; call(['ifconfig', interface, 'up']) </code> <br>
+        <code> &emsp; print("") </code> <br>
+        <br>
+      <p> Next, it drops the current IP address and renews it using dhclient. </p>
+
+        <code> # Renews IP address </code> <br>
+        <code> &emsp; call(['dhclient', '-r', interface]) </code> <br>
+        <code> &emsp; call(['dhclient', interface]) </code> <br>
+        <code> &emsp; print("") </code> <br>
+        <br>
+
+      <p> Then, it displays the new IP address. </p>
+
+        <code> &emsp; # Shows new IPV4 Addresses </code> <br>
+        <code> &emsp; call(['ip', '-4', 'address']) </code> <br>
+        <code> &emsp; print("") </code> <br>
+        <br>
+
+      <p> Finally, it waits for 10 seconds. </p>
+
+        <code> &emsp; sleep(10) </code> <br>
+        <br>
+
+      </div>
+      <div class="col-sm-1">
+      </div>
+  </div>
+
+</div>
+
+</body>
+
+<footer class="text-center">
+  <h4> ======= </h4>
+  <h4> Created by: William "Vulcan" McDonald || Contact me: <a href="mailto:vulcanroot@protonmail.ch"> vulcanroot@protonmail.ch</a>.</h4>
+  <h4> ======= </h4>
+</footer>
+
+</html>
