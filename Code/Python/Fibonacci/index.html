@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+  <!--- 2071124516 --->
+<head>
+  <title> William McDonald: Fibonacci </title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="../../../css/bootstrap.min.css">
+  <link rel="stylesheet" href="../../../css/custom.min.css">
+  <link rel="stylesheet" href="../../../css/nat.css">
+  <script src="../../../js/jquery.min.js"></script>
+  <script src="../../../js/bootstrap.min.js"></script>
+
+</head>
+<body>
+<!--- add your bootstrap code  below this line--- >
+<!-- This is for navbar -->
+<nav class="navbar navbar-default navbar-fixed-top">
+	<div class="container-fluid">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+		</div>
+		<div class="collapse navbar-collapse" id="myNavbar">
+		<ul class="nav navbar-nav">
+			<li><a href="index.html"> Home </a></li>
+			<li><a href="about.html"> About Me </a></li>
+			<li><a href="https://github.com/WilliamMcDonald"> Github </a></li>
+			<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#"> Github Repositories <span class="caret"></span></a>
+				<ul class="dropdown-menu">
+					<li><a href="https://github.com/WilliamMcDonald/Arduino"> Arduino </a></a></li>
+					<li><a href="https://github.com/WilliamMcDonald/HTML"> HTML </a></li>
+					<li><a href="https://github.com/WilliamMcDonald/Java"> Java </a></li>
+					<li><a href="https://github.com/WilliamMcDonald/Python"> Python </a></a></li>
+					<li><a href="https://github.com/WilliamMcDonald/williammcdonald.github.io"> Github IO </a></li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+	</div>
+</nav>
+
+<!--- end of my code -->
+<!--- do not delete this code -->
+
+<script>
+$(document).ready(function(){
+  // Add scrollspy to <body>
+  $('body').scrollspy({target: ".navbar", offset: 50});
+  // Add smooth scrolling on all links inside the navbar
+  $("#myNavbar a").on('click', function(event) {
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+      // Store hash
+      var hash = this.hash;
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 800, function(){
+
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    }  // End if
+  });
+});
+</script>
+
+
+<div id="header">
+  <h1> William McDonald </h1>
+</div>
+
+<!-- the web page layout -->
+<div class="container-fluid text-center">
+	<div class="row content">
+      <!-- Left -->
+      <div class="col-sm-2 sidenav">
+        <div class="well">
+          <h3> Contact Me </h3>
+          <p> If you would like to contact me, contact me at vulcanroot@protonmail.ch </p>
+        </div>
+      </div>
+        <!-- Middle -->
+		<div class="col-sm-8 text-center">
+      <h3> Goal </h3>
+        <p> While I was at Tri-tech I had to complete this in order to contiue on to my own projects. </p>
+      <h3> Challenges </h3>
+        <p> I did actually end up struggling with this one, but that is because I tried to fancy it up a bit. As you can see, It made it interesting and helpful. </p>
+    </div>
+    <!-- Right -->
+    <div class="col-sm-2 sidenav">
+      <div class="well">
+			     <h3> Education </h3>
+			     <p> HS: Kennewick High School Class of 2018 </p>
+      </div>
+    </div>
+  </div>
+  <div class="row content">
+    <h3> Breakdown </h3>
+      <div class="col-sm-1">
+      </div>
+      <div class="col-sm-10 text-left">
+        <p> I start off asking the user for their option. </p>
+
+          <code> option = int(input("What version would you like? 1? or 2?")) </code> <br>
+          <br>
+
+        <p> I then check which option they chose. </p>
+
+          <code> if Option == 1: </code> <br>
+          <br>
+
+        <p> Now that I know they want option 1, I start by asking which place of element they would like. </p>
+
+          <code> &emsp; n = in(input("What place element would you like to see?")) </code> <br>
+          <br>
+
+        <p> I then initialize two variables: a and b. </p>
+
+          <code> &emsp; a = 0 </code> <br>
+          <code> &emsp; b = 1 </code> <br>
+          <br>
+
+        <p> I then start the for loop to determine the element. </p>
+
+          <code> &emsp; for i in range(0,n): </code> <br>
+          <code> &emsp; &emsp; temp = a </code> <br>
+          <code> &emsp; &emsp; a = b </code> <br>
+          <code> &emsp; &emsp; b = temp + b </code> <br>
+          <br>
+
+        <p> Now that we know the element, we go to the fancy output. First I determine the foot (one's place) of the number. </p>
+
+          <code> &emsp; if (len(str(n)) > 1): </code> <br>
+          <code> &emsp; &emsp; foot = str(n) </code> <br>
+          <code> &emsp; &emsp; foot = foot[-1] </code> <br>
+          <code> &emsp; else: </code> <br>
+          <code> &emsp; &emsp; foot = str(n) </code> <br>
+          <br>
+
+        <p> Then I need to determine the tens place. </p>
+
+          <code> &emsp; if (len(str(n)) > 1): </code> <br>
+          <code> &emsp; &emsp; tens = str(n) </code> <br>
+          <code> &emsp; &emsp; tens = tens[-2] </code> <br>
+          <code> &emsp; else: </code>
+          <code> &emsp; &emsp; tens = '0' </code> <br>
+          <br>
+
+        <p> Now is where the output comes in. I'm going to use the tens place to see if it is a 1, because all teen numbers end in 'th', I will use the foot to determine if the number ends with 'st', 'nd', or 'rd'. </p>
+
+          <code> &emsp; &emsp; if (tens == '1'): </code> <br>
+          <code> &emsp; &emsp; &emsp; print("The " + str(n) + "th element is " + str(a)) </code> <br>
+          <code> &emsp; &emsp; elif (foot == '1'): </code> <br>
+          <code> &emsp; &emsp; &emsp; print("The " + str(n) + "st element is " + str(a)) </code> <br>
+          <code> &emsp; &emsp; elif (foot == '2'): </code> <br>
+          <code> &emsp; &emsp; &emsp; print("The " + str(n) + "nd element is " + str(a)) </code> <br>
+          <code> &emsp; &emsp; elif (foot == '3'): </code> <br>
+          <code> &emsp; &emsp; print("The " + str(n) + "rd element is " + str(a)) </code> <br>
+          <code> &emsp; else: </code> <br>
+          <code> &emsp; &emsp; &emsp; print("The " + str(n) + "th element is " + str(a)) </code> <br>
+          <br>
+
+        <p> Now we move on to if they choose the second option, where it just lists all the elements. </p>
+
+          <code> elif option == 2: </code> <br>
+          <br>
+
+        <p> We're going to start off asking how many elements they would like shown. </p>
+
+          <code> &emsp; n = int(input("How many elements of the sequence would you like to see?")) </code> <br>
+          <br>
+
+        <p> As before, I initialize a and b. This time, I'm going to initialize sequence for output. </p>
+
+          <code> &emsp; a = 0 </code> <br>
+          <code> &emsp; b = 0 </code> <br>
+          <code> &emsp; sequence = "" </code> <br>
+          <br>
+
+        <p> I now start a for loop that calculates the Fibonacci sequence and then stores it in the variable 'sequence' </p>
+
+          <code> &emsp; for i in range(0, n): </code> <br>
+          <code> &emsp; &emsp; temp = a </code> <br>
+          <code> &emsp; &emsp; a = b </code> <br>
+          <code> &emsp; &emsp; b = temp + b </code> <br>
+          <code> &emsp; &emsp; sequence = sequence + str(a) + " " </code> <br>
+          <br>
+
+        <p> Then we display all the elements. </p>
+
+          <code> &emsp; print("The first " + str(n) + " elements are: " + sequence) </code> <br>
+          <br>
+
+        <p> Finally, if they enter in an improper choice, inform them before quitting. </p>
+
+          <code> else: </code> <br>
+          <code> &emsp; print("Improper choice.") </code> <br>
+          <br>
+
+      </div>
+      <div class="col-sm-1">
+      </div>
+  </div>
+
+</div>
+
+</body>
+
+<footer class="text-center">
+  <h4> ======= </h4>
+  <h4> Created by: William "Vulcan" McDonald || Contact me: <a href="mailto:vulcanroot@protonmail.ch"> vulcanroot@protonmail.ch</a>.</h4>
+  <h4> ======= </h4>
+</footer>
+
+</html>

@@ -2,7 +2,7 @@
 <html>
   <!--- 2071124516 --->
 <head>
-  <title> William McDonald: homeprint.py </title>
+  <title> William McDonald: Hello </title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="../../../css/bootstrap.min.css">
@@ -90,10 +90,10 @@ $(document).ready(function(){
         <!-- Middle -->
 		<div class="col-sm-8 text-center">
       <h3> Goal </h3>
-        <p> I'm a lazy person so I wanted to find a way to automate printing out my code, without having to put it into a word document and risk losing the formatting. </p>
+        <p> While I was at Tri-tech I had to complete this in order to contiue on to my own projects. </p>
       <h3> Challenges </h3>
-        <p> I did not face any challenges with this, I just typed it up in the space of about 2 minutes. Really, the most difficult part was converting it to a binary file. </p>
-      </div>
+        <p> This was not a challenge at all, considering I had been using Python for quite a while beforehand. I was able to knock it out pretty quickly to get to my projects. </p>
+    </div>
     <!-- Right -->
     <div class="col-sm-2 sidenav">
       <div class="well">
@@ -107,35 +107,11 @@ $(document).ready(function(){
       <div class="col-sm-1">
       </div>
       <div class="col-sm-10 text-left">
-        <p> The first two lines denote the file name, version number, and the author (me). </p>
+        <p> It starts a for loop to print "Hello World!" 9 times. </p>
 
-          <code> # homeprint.py Eins Null </code> <br>
-          <code> # Made by William "Vulcan" McDonald. </code> <br><br>
-
-        <p> The next set of lines import the packages required: subprocess and os. </p>
-
-          <code> import subprocess </code> <br>
-          <code> from subprocess import call </code> <br>
-          <code> import os </code> <br>
-          <code> from os import path </code> <br><br>
-
-        <p> The variable 'printer' is defined with the address, either by hostname or IP. </p>
-
-          <code> # Change value to your printer's hostname of IP address </code> <br>
-          <code> printer = '192.168.7.85' </code> <br><br>
-
-        <p> It then starts an infinite loop to retrieve file and determine if the file exists. If the file does not exist, inform user and collect file again. </p>
-
-          <code> while True: </code> <br>
-          <code>  &emsp; file = raw_input("Where is your file? ") </code> <br>
-          <code>  &emsp; if (path.isfile(file)): </code> <br>
-          <code>    &emsp; &ensp; break </code> <br>
-          <code>  &emsp; else: </code> <br>
-          <code>    &emsp; &ensp; print("File " + file + " does not exist.") </code> <br><br>
-
-      <p> Finally, it calls the command to send the file to the print cache. </p>
-
-        <code> call(['lp', '-d', printer, file]) </code> <br><br>
+          <code> for x in range(0,9): </code> <br>
+          <code> &emsp; print("Hello World!") </code> <br>
+          <br>
 
       </div>
       <div class="col-sm-1">
