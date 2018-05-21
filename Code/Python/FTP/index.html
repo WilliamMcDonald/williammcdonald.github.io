@@ -153,83 +153,172 @@ $(document).ready(function(){
 
         <p> I use a try except block in case the user inputs the file incorrectly. If they enter it in incorrectly, I give them a change to enter it in again. The next part is to retrieve the user list, read the lines in, and then break from the loop. </p>
 
-          <code> &emsp; # Retrieve user list </code> <br>
-          <code> &emsp; userlistFile = raw_input('Where is your user list?') </code> <br>
-          <code> &emsp; f = open(userlistFile, 'r') </code> <br>
-          <code> &emsp; print('Reading lines...') </code> <br>
-          <code> &emsp; users = f.readlines() </code> <br>
-          <code> &emsp; f.close() </code> <br>
-          <code> &emsp; print('Lines read in.') </code> <br>
-          <code> &emsp; break </code> <br>
+          <code> &emsp; &emsp; # Retrieve user list </code> <br>
+          <code> &emsp; &emsp; userlistFile = raw_input('Where is your user list?') </code> <br>
+          <code> &emsp; &emsp; f = open(userlistFile, 'r') </code> <br>
+          <code> &emsp; &emsp; print('Reading lines...') </code> <br>
+          <code> &emsp; &emsp; users = f.readlines() </code> <br>
+          <code> &emsp; &emsp; f.close() </code> <br>
+          <code> &emsp; &emsp; print('Lines read in.') </code> <br>
+          <code> &emsp; &emsp; break </code> <br>
           <br>
 
         <p> If I receive a FileNotFoundError, I enter an exception where it notifies the user and then rounds the loop </p>
 
-          <code> &emsp; if (len(str(n)) > 1): </code> <br>
-          <code> &emsp; &emsp; foot = str(n) </code> <br>
-          <code> &emsp; &emsp; foot = foot[-1] </code> <br>
+          <code> &emsp; &emsp; # If file does not exist, notify user and try again. </code> <br>
+          <code> &emsp; escept FileNotFoundError: </code> <br>
+          <code> &emsp; &emsp; print('File ' + userlistFile + ' does not exist.') </code> <br>
+          <br>
+
+        <p> Now that I know where the user's userlist is, I can begin the installation, but first I need to define the starting variables. </p>
+
+          <code> # Define starting Variables </code> <br>
+          <code> filestring = "" </code> <br>
+          <code> ftpstring = '' </code> <br>
+          <code> useruser  = ''</code> <br>
+          <code> username = '' </code> <br>
+          <code> &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; </code> <br>
+          <code> config = '/etc/vsftpd.conf' </code> <br>
+          <code> &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; </code> <br>
+          <code> head = "Modified by FORGE" </code> <br>
+          <code> headnotinline = True </code> <br>
+          <br>
+
+        <p> I start an infinite loop that will install VSFTPD if it is not already installed. </p>
+
+          <code> while True: </code> <br>
+          <br>
+
+        <p> I next determine if the vsftpd config file exists. If it does exist, I check to see if I have edited it before. </p>
+
+          <code> # Does config file exist: </code> <br>
+          <code> &emsp; if (path.isfile(config)): </code> <br>
+          <code> &emsp; &emsp; print('Reading config file lines in...') </code> <br>
+          <code> &emsp; &emsp; f = open(config, 'r') </code> <br>
+          <code> &emsp; &emsp; lines = f.readlines() </code> <br>
+          <code> &emsp; &emsp; f.close() </code> <br>
+          <code> &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; </code> <br>
+          <code> &emsp; &emsp; # Is head not in the file? </code> <br>
+          <code> &emsp; &emsp; for line in lines: </code> <br>
+          <code> &emsp; &emsp; &emsp; if (head in line): </code> <br>
+          <code> &emsp; &emsp; &emsp; &emsp; headnotinline = False </code> <br>
+          <br>
+
+        <p> Now that I know whether or not the head is in the file, I start an if statement to use this information accordingly. </p>
+
+          <code> &emsp; &emsp; If head is not in the file, copy my file in. </code> <br>
+          <code> &emsp; &emsp; if (headnotinline): </code> <br>
+          <code> &emsp; &emsp; &emsp; call(['cp', file, file + '.bak']) </code> <br>
+          <code> &emsp; &emsp; &emsp; call(['cp', 'myconf.conf', file]) </code> <br>
+          <code> &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; </code> <br>
+          <code> &emsp; &emsp; &emsp; # Copy over your user list file. </code> <br>
+          <code> &emsp; &emsp; &emsp; call(['cp', userlistFile, '/etc/vsftpd.userlist']) </code> <br>
+          <code> &emsp; &emsp; break </code> <br>
+          <br>
+
+        <p> If the config file does not exist, install vsfptd. </p>
+
           <code> &emsp; else: </code> <br>
-          <code> &emsp; &emsp; foot = str(n) </code> <br>
+          <code> &emsp; &emsp; call(['apt-get', 'install', 'vsftpd', '-y']) </code> <br>
+          <code> &emsp; &emsp; sleep(5) </code> <br>
           <br>
 
-        <p> Then I need to determine the tens place. </p>
+        <p> I now need to open the Firewall. </p>
 
-          <code> &emsp; if (len(str(n)) > 1): </code> <br>
-          <code> &emsp; &emsp; tens = str(n) </code> <br>
-          <code> &emsp; &emsp; tens = tens[-2] </code> <br>
-          <code> &emsp; else: </code>
-          <code> &emsp; &emsp; tens = '0' </code> <br>
+          <code> call(['ufw', 'enable']) </code> <br>
+          <code> call(['ufw', 'status']) </code> <br>
+          <code> &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;  </code> <br>
+          <code> call(['ufw', 'allow', '20/tcp']) </code> <br>
+          <code> call(['ufw', 'allow', '21/tcp']) </code> <br>
+          <code> call(['ufw', 'allow', '990/tcp']) </code> <br>
+          <code> call(['ufw', 'allow', '40000:50000/tcp']) </code> <br>
+          <code> &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; </code> <br>
+          <code> call(['ufw', 'status']) </code> <br>
           <br>
 
-        <p> Now is where the output comes in. I'm going to use the tens place to see if it is a 1, because all teen numbers end in 'th', I will use the foot to determine if the number ends with 'st', 'nd', or 'rd'. </p>
+        <p> I now start the creation of the users. </p>
 
-          <code> &emsp; &emsp; if (tens == '1'): </code> <br>
-          <code> &emsp; &emsp; &emsp; print("The " + str(n) + "th element is " + str(a)) </code> <br>
-          <code> &emsp; &emsp; elif (foot == '1'): </code> <br>
-          <code> &emsp; &emsp; &emsp; print("The " + str(n) + "st element is " + str(a)) </code> <br>
-          <code> &emsp; &emsp; elif (foot == '2'): </code> <br>
-          <code> &emsp; &emsp; &emsp; print("The " + str(n) + "nd element is " + str(a)) </code> <br>
-          <code> &emsp; &emsp; elif (foot == '3'): </code> <br>
-          <code> &emsp; &emsp; print("The " + str(n) + "rd element is " + str(a)) </code> <br>
+          <code> for user in users: </code> <br>
+          <code> &emsp; user = user.strip('\n') </code> <br>
+          <code> &emsp; print('Starting ' + user + '.') </code> <br>
+          <br>
+
+        <p> I initialize the variables based upon the user. </p>
+
+          <code> &emsp; print('Setting ftpstring') </code> <br>
+          <code> &emsp; ftpstring = '/home/' + user + '/ftp/' </code> <br>
+          <code> &emsp; print('ftpstring has been set.') </code> <br>
+          <code> &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; </code> <br>
+          <code> &emsp; print('Setting filestring.') </code> <br>
+          <code> &emsp; filestring = ftpstring + 'files/' </code> <br>
+          <code> &emsp; print('filestring has been set.') </code> <br>
+          <code> &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; </code>
+          <br>
+          <code> print('Setting useruser.') </code> <br>
+          <code> useruser = user + ':' + users </code> <br>
+          <code> print('useruser has been set.') </code> <br>
+          <code> &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; </code>
+          <br>
+          <br>
+
+        <p> I then need to determine if the user already exists on the server. </p>
+
+          <code> &emsp; print("Determining user's existence.") </code> <br>
+          <code> &emsp; username = Popen(['grep', '-c', '^' + user, '/etc/passwd'], stdout=pipe) </code> <br>
+          <code> &emsp; username = str(username.stdout.read()) </code> <br>
+          <code> &emsp; username = username[:-3] </code> <br>
+          <code> &emsp; username = username.strip('b') </code> <br>
+          <code> &emsp; username = username.strip("'") </code> <br>
+          <br>
+
+        <p> If the user doesn't exist, create the user and add the user's group just in case it doesn't when user is created. </p>
+
+          <code> &emsp; if (username = '0'): </code> <br>
+          <code> &emsp; &emsp; print('User does not exist.') </code> <br>
+          <code> &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; </code> <br>
+          <code> &emsp; &emsp; print('Creating user.') </code> <br>
+          <code> &emsp; &emsp; call(['adduser', '--gecos', '-', '--disabled-password', user]) </code> <br>
+          <code> &emsp; &emsp; print('User has been created.') </code> <br>
+          <code> &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; </code> <br>
+          <code> &emsp; &emsp; print("Adding user's group.") </code> <br>
+          <code> &emsp; &emsp; call(['groupadd', '-f', user]) </code> <br>
+          <code> &emsp; &emsp; print("Added user's group.") </code> <br>
+          <br>
+
+        <p> If the user already exists, inform the user and move on. </p>
+
           <code> &emsp; else: </code> <br>
-          <code> &emsp; &emsp; &emsp; print("The " + str(n) + "th element is " + str(a)) </code> <br>
+          <code> &emsp; &emsp; print(user + ' already exists.') </code> <br>
           <br>
 
-        <p> Now we move on to if they choose the second option, where it just lists all the elements. </p>
+        <p> Change the user's password to the default as a precaution. <p>
 
-          <code> elif option == 2: </code> <br>
+          <code> &emsp; print('Changing password to default: ' + user + '.') </code> <br>
+          <code> &emsp; passwordIN = Popen(['echo', user + '\n' + user], stdout=pipe) </code> <br>
+          <code> &emsp; passwordOut = Popen(['passwd', user], stdin=passwordIN.stdout) </code> <br>
+          <code> &emsp; passwordIN.stdout.close() </code> <br>
+          <code> &emsp; print('Password set.') </code> <br>
           <br>
 
-        <p> We're going to start off asking how many elements they would like shown. </p>
+        <p> Then I need to change the permissions and set up the directory for each of the users. </p>
 
-          <code> &emsp; n = int(input("How many elements of the sequence would you like to see?")) </code> <br>
+          <code> &emsp; print('Setting up permissions and directory.') </code> <br>
+          <code> &emsp; call(['mkdir', '-p', filestring]) </code> <br>
+          <code> &emsp; call(['chown', 'nobody:nogroup', ftpstring]) </code> <br>
+          <code> &emsp; call(['chmod', 'a-w', ftpstring]) </code> <br>
+          <code> &emsp; call(['chown', useruser, filestring]) </code> <br>
+          <code> &emsp; print('Permissions and directory set up.') </code> <br>
           <br>
 
-        <p> As before, I initialize a and b. This time, I'm going to initialize sequence for output. </p>
+        <p> I finish by setting up the test text file and print a new line to differentiate between the debug screen for users. </p>
 
-          <code> &emsp; a = 0 </code> <br>
-          <code> &emsp; b = 0 </code> <br>
-          <code> &emsp; sequence = "" </code> <br>
-          <br>
+          <code> &emsp; print('Setting up test text file for user.') </code> <br>
+          <code> &emsp; sub1 = Popen(['echo', 'test'], stdout=pipe) </code> <br>
+          <code> &emsp; sub2 = Popen(['tee', '-a', filestring + 'test.txt'], stdin=sub1.stdout) </code> <br>
+          <code> &emsp; sub1.stdout.close() </code> <br>
+          <code> &emsp; print('Test text file has been set up.') </code> <br>
 
-        <p> I now start a for loop that calculates the Fibonacci sequence and then stores it in the variable 'sequence' </p>
-
-          <code> &emsp; for i in range(0, n): </code> <br>
-          <code> &emsp; &emsp; temp = a </code> <br>
-          <code> &emsp; &emsp; a = b </code> <br>
-          <code> &emsp; &emsp; b = temp + b </code> <br>
-          <code> &emsp; &emsp; sequence = sequence + str(a) + " " </code> <br>
-          <br>
-
-        <p> Then we display all the elements. </p>
-
-          <code> &emsp; print("The first " + str(n) + " elements are: " + sequence) </code> <br>
-          <br>
-
-        <p> Finally, if they enter in an improper choice, inform them before quitting. </p>
-
-          <code> else: </code> <br>
-          <code> &emsp; print("Improper choice.") </code> <br>
+          <code> &emsp; print("") </code> <br>
           <br>
 
       </div>
@@ -246,5 +335,4 @@ $(document).ready(function(){
   <h4> Created by: William "Vulcan" McDonald || Contact me: <a href="mailto:vulcanroot@protonmail.ch"> vulcanroot@protonmail.ch</a>.</h4>
   <h4> ======= </h4>
 </footer>
-
 </html>
