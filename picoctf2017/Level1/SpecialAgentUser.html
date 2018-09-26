@@ -2,10 +2,10 @@
 <html>
 <!---
   Programmer : William McDonald
-  Date modified : 09/25/18
+  Date modified : 09/26/18
 --->
 <head>
-  <title> William McDonald </title>
+  <title> William McDonald | PicoCTF 2017 : Special Agent User </title>
 
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -28,27 +28,27 @@
 	<div class="row content">
         <!-- Left -->
 		<div class="col-sm-2 sidenav">
-      <h3> Contact Me </h3>
-      <p> This is currently a Work in progress, and does not work </p>
-      <p> If you would like to contact me, contact me at wmcdonald2k.git@gmail.com </p>
-      <a href="contact/index.html" class="btn btn-primary disabled" role="button"> Form </a>
+      <div class="contact"></div>
 		</div>
         <!-- Middle -->
 		<div class="col-sm-8 text-center">
       <h3> Instructions </h3>
-        <p> We can get into the Administrator's computer with a browser exploit. But first, we need to figure out what browser they're using. Perhaps this information is located in a network packet capture we took: <a href="problemFiles/SpecialAgentUser/data.pcap" target=_blank> data.pcap.</a> Enter the browser and version as "BrowserName BrowserVersion". NOTE: We're just looking for up to 3 levels of subversions for the browser version (ie. Version 1.2.3 for Version 1.2.3.4) and ignore any 0th subversions (ie. 1.2 for 1.2.0) </p>
+        <p> We can get into the Administrator's computer with a browser exploit. But first, we need to figure out what browser they're using. Perhaps this information is located in a network packet capture we took: <a href="https://williammcdonald.github.io/picoctf2017/Level1/problemFiles/SpecialAgentUser/data.pcap" target=_blank> data.pcap.</a> Enter the browser and version as "BrowserName BrowserVersion". NOTE: We're just looking for up to 3 levels of subversions for the browser version (ie. Version 1.2.3 for Version 1.2.3.4) and ignore any 0th subversions (ie. 1.2 for 1.2.0) </p>
       <h3> Hints </h3>
         <p> Where can we find information on the browser in networking data? Maybe try <a href="http://www.useragentstring.com./" target=_blank>reading up on user-agent strings</a>. </p>
       <h3> Solution </h3>
         <p> Special Agent User was a lot like Digital Camouflage. I did not use the same TCP Stream even though I had just finished Digital Camouflage, because I honestly didn't realize that the browser would show in there, I guess I didn't look hard enough. I searched for a "GET" tag in the info and found one right away. When I looked into it, I found what I was looking for right at the top: Firefox/25.0 ... except I didn't realize it. I don't remember exactly what the flag was, but I do remember how difficult it was to figure out the exact way it was supposed to be entered. </p>
     </div>
             <!-- Right -->
-      <div class="col-sm-2 sidenav">
-        <h3> Previous Placings in Competitions </h3>
-        <p> No placings yet, but I hope to be participating in picoctf 2018. </p>
-      </div>
+    <div class="col-sm-2 sidenav">
+      <div class="education"></div>
     </div>
   </div>
+</div>
+
+<footer class="text-center">
+  <div class="foot"></div>
+</footer>
 
 </body>
 </html>

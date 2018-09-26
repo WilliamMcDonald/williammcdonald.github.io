@@ -2,10 +2,10 @@
 <html>
 <!---
   Programmer : William McDonald
-  Date modified : 09/25/18
+  Date modified : 09/26/18
 --->
 <head>
-  <title> William McDonald </title>
+  <title> William McDonald | PicoCTF 2017 : Meta Find Me </title>
 
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -28,27 +28,27 @@
 	<div class="row content">
         <!-- Left -->
 		<div class="col-sm-2 sidenav">
-      <h3> Contact Me </h3>
-      <p> This is currently a Work in progress, and does not work </p>
-      <p> If you would like to contact me, contact me at wmcdonald2k.git@gmail.com </p>
-      <a href="contact/index.html" class="btn btn-primary disabled" role="button"> Form </a>
+      <div class="contact"></div>
 		</div>
         <!-- Middle -->
 		<div class="col-sm-8 text-center">
       <h3> Instructions </h3>
-        <p> Find the location of the flag in the image: <a href="problemFiles/MetaFindMe/image.jpg" target=_blank>image.jpg</a>. Note: Latitude and longitude values are in degrees with no degree symbols,/direction letters, minutes, seconds, or periods. They should only be digits. The flag is not just a set of coordinates - if you think that, keep looking! </p>
+        <p> Find the location of the flag in the image: <a href="https://williammcdonald.github.io/picoctf2017/Level2/problemFiles/MetaFindMe/image.jpg" target=_blank>image.jpg</a>. Note: Latitude and longitude values are in degrees with no degree symbols,/direction letters, minutes, seconds, or periods. They should only be digits. The flag is not just a set of coordinates - if you think that, keep looking! </p>
       <h3> Hints </h3>
         <p> How can images store location data? Perhaps search for GPS info on photos. </p>
       <h3> Solution </h3>
         <p> We are still in the real of doable for me. I opened the image in hexedit, my preferred hex editor for windows, and started reading along the right hand side, looking for something off. I found the flag template in there, and copied it into the flag submit bar of the problem. I then continued looking throught hexedit, looking for the GPS data. I could not, and still can not find where it would be, that is something I need to figure out, nontheless, I used http://metapicz.com/#landing to get the latitude and longitude, and substituted the values in the flag. </p>
     </div>
             <!-- Right -->
-      <div class="col-sm-2 sidenav">
-        <h3> Previous Placings in Competitions </h3>
-        <p> No placings yet, but I hope to be participating in picoctf 2018. </p>
-      </div>
+    <div class="col-sm-2 sidenav">
+      <div class="education"></div>
     </div>
   </div>
+</div>
+
+<footer class="text-center">
+  <div class="foot"></div>
+</footer>
 
 </body>
 </html>
