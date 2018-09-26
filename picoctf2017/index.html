@@ -1,199 +1,140 @@
 <!DOCTYPE html>
 <html>
-  <!--- 2071124516 --->
+<!---
+  Programmer : William McDonald
+  Date modified : 09/25/18
+--->
 <head>
-  <title> William McDonald: PicoCTF Home </title>
+  <title> William McDonald </title>
+
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="../css/bootstrap.min.css">
-  <link rel="stylesheet" href="../css/custom.min.css">
-  <link rel="stylesheet" href="../css/nat.css">
-  <script src="../js/jquery.min.js"></script>
-  <script src="../js/bootstrap.min.js"></script>
-
+  <link rel="stylesheet" href="https://williammcdonald.github.io/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://williammcdonald.github.io/css/custom.min.css">
+  <link rel="stylesheet" href="https://williammcdonald.github.io/css/nat.css">
+  <script src="https://williammcdonald.github.io/js/jquery.min.js"></script>
+  <script src="https://williammcdonald.github.io/js/bootstrap.min.js"></script>
+  <script src="https://williammcdonald.github.io/js/scrollspy.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <script src="https://williammcdonald.github.io/js/jquery.js"></script>
 </head>
+
 <body>
-<!--- add your bootstrap code  below this line--- >
-<!-- This is for navbar -->
-<nav class="navbar navbar-default navbar-fixed-top">
-	<div class="container-fluid">
-		<div class="navbar-header">
-			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-				<span class="icon-bar"></span>
-				<span class="icon-bar"></span>
-				<span class="icon-bar"></span>
-			</button>
-		</div>
-		<div class="collapse navbar-collapse" id="myNavbar">
-		<ul class="nav navbar-nav">
-			<li><a href="index.html"> Home </a></li>
-			<li><a href="about.html"> About Me </a></li>
-			<li><a href="tritech/tt2016.html"> Tritech Summer School </a></li>
-			<li><a href="https://github.com/WilliamMcDonald"> Github </a></li>
-			<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#"> Github Repositories <span class="caret"></span></a>
-				<ul class="dropdown-menu">
-					<li><a href="https://github.com/WilliamMcDonald/Arduino"> Arduino </a></a></li>
-					<li><a href="https://github.com/WilliamMcDonald/HTML"> HTML </a></li>
-					<li><a href="https://github.com/WilliamMcDonald/Java"> Java </a></li>
-					<li><a href="https://github.com/WilliamMcDonald/Python"> Python </a></a></li>
-					<li><a href="https://github.com/WilliamMcDonald/williammcdonald.github.io"> Github IO </a></li>
-				</ul>
-			</li>
-		</ul>
-	</div>
-	</div>
-</nav>
 
-
-<!--- end of my code -->
-<!--- do not delete this code -->
-
-<script>
-$(document).ready(function(){
-  // Add scrollspy to <body>
-  $('body').scrollspy({target: ".navbar", offset: 50});
-  // Add smooth scrolling on all links inside the navbar
-  $("#myNavbar a").on('click', function(event) {
-    // Make sure this.hash has a value before overriding default behavior
-    if (this.hash !== "") {
-      // Prevent default anchor click behavior
-      event.preventDefault();
-      // Store hash
-      var hash = this.hash;
-      // Using jQuery's animate() method to add smooth page scroll
-      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
-      $('html, body').animate({
-        scrollTop: $(hash).offset().top
-      }, 800, function(){
-
-        // Add hash (#) to URL when done scrolling (default click behavior)
-        window.location.hash = hash;
-      });
-    }  // End if
-  });
-});
-</script>
-
-
-<div id="header">
-<h1> William McDonald </h1>
-</div>
+  <div class="header"></div>
 
 <!-- the web page layout -->
 <div class="container-fluid text-center">
 	<div class="row content">
         <!-- Left -->
 		<div class="col-sm-2 sidenav">
-      <h3> Contact Me </h3>
-      <p> This is currently a Work in progress, and does not work </p>
-      <p> If you would like to contact me, contact me at wmcdonald2k.git@gmail.com </p>
-      <a href="contact/index.html" class="btn btn-primary disabled" role="button"> Form </a>
+      <div class="contact"></div>
 		</div>
         <!-- Middle -->
 		<div class="col-sm-8 text-left">
       <h2> Challenges </h2>
       <h3> Level 1 </h3>
         <h4> Forensics </h4>
-          <a href="Level1/DigitalCamouflage.html" class="btn btn-primary btn-c" role="button"> Digital Camouflage </a>
-          <a href="Level1/SpecialAgentUser.html" class="btn btn-primary btn-c" role="button"> Special Agent User </a>
+          <a href="https://williammcdonald.github.io/picoctf2017/https://williammcdonald.github.io/picoctf2017/Level1/DigitalCamouflage.html" class="btn btn-primary btn-c" role="button"> Digital Camouflage </a>
+          <a href="https://williammcdonald.github.io/picoctf2017/https://williammcdonald.github.io/picoctf2017/Level1/SpecialAgentUser.html" class="btn btn-primary btn-c" role="button"> Special Agent User </a>
         <h4> Cryptography </h4>
-          <a href="Level1/keyz.html" class="btn btn-primary btn-c" role="button"> Keyz </a>
-          <a href="Level1/Substitute.html" class="btn btn-primary btn-c" role="button"> Substitute </a>
-          <a href="Level1/Hash101.html" class="btn btn-primary btn-c" role="button"> Hash101 </a>
-          <a href="Level1/computeAES.html" class="btn btn-primary btn-c" role="button"> computeAES </a>
-          <a href="Level1/ComputeRSA.html" class="btn btn-primary btn-c" role="button"> computeRSA </a>
+          <a href="https://williammcdonald.github.io/picoctf2017/https://williammcdonald.github.io/picoctf2017/Level1/keyz.html" class="btn btn-primary btn-c" role="button"> Keyz </a>
+          <a href="https://williammcdonald.github.io/picoctf2017/Level1/Substitute.html" class="btn btn-primary btn-c" role="button"> Substitute </a>
+          <a href="https://williammcdonald.github.io/picoctf2017/Level1/Hash101.html" class="btn btn-primary btn-c" role="button"> Hash101 </a>
+          <a href="https://williammcdonald.github.io/picoctf2017/Level1/computeAES.html" class="btn btn-primary btn-c" role="button"> computeAES </a>
+          <a href="https://williammcdonald.github.io/picoctf2017/Level1/ComputeRSA.html" class="btn btn-primary btn-c" role="button"> computeRSA </a>
         <h4> Reverse Engineering </h4>
-          <a href="Level1/Hex2Raw.html" class="btn btn-primary btn-c" role="button"> Hex2Raw </a>
-          <a href="Level1/Raw2Hex.html" class="btn btn-primary btn-c" role="button"> Raw2Hex </a>
+          <a href="https://williammcdonald.github.io/picoctf2017/Level1/Hex2Raw.html" class="btn btn-primary btn-c" role="button"> Hex2Raw </a>
+          <a href="https://williammcdonald.github.io/picoctf2017/Level1/Raw2Hex.html" class="btn btn-primary btn-c" role="button"> Raw2Hex </a>
         <h4> Web Exploitation </h4>
-          <a href="Level1/WhatIsWeb.html" class="btn btn-primary btn-c" role="button"> What is Web </a>
+          <a href="https://williammcdonald.github.io/picoctf2017/Level1/WhatIsWeb.html" class="btn btn-primary btn-c" role="button"> What is Web </a>
         <h4> Binary Exploitation </h4>
-          <a href="Level1/BashLoop.html" class="btn btn-primary btn-c" role="button"> Bash Loop </a>
-          <a href="Level1/JustNo.html" class="btn btn-primary btn-c" role="button"> Just No </a>
+          <a href="https://williammcdonald.github.io/picoctf2017/Level1/BashLoop.html" class="btn btn-primary btn-c" role="button"> Bash Loop </a>
+          <a href="https://williammcdonald.github.io/picoctf2017/Level1/JustNo.html" class="btn btn-primary btn-c" role="button"> Just No </a>
         <h4> MISC </h4>
-          <a href="Level1/InternetKitties.html" class="btn btn-primary btn-c" role="button"> Internet Kitties </a>
-          <a href="Level1/piazza.html" class="btn btn-primary btn-c" role="button"> Piazza </a>
-          <a href="Level1/LeafoftheTree.html" class="btn btn-primary btn-c" role="button"> Leaf of the Tree </a>
-          <a href="Level1/looooong.html" class="btn btn-primary btn-c" role="button"> loooooong </a>
-          <a href="Level1/LeafoftheForest.html" class="btn btn-primary btn-c" role="button"> Leaf of the Forest </a>
-          <a href="Level1/WorldChat.html" class="btn btn-primary btn-c" role="button"> WorldChat </a>
+          <a href="https://williammcdonald.github.io/picoctf2017/Level1/InternetKitties.html" class="btn btn-primary btn-c" role="button"> Internet Kitties </a>
+          <a href="https://williammcdonald.github.io/picoctf2017/Level1/piazza.html" class="btn btn-primary btn-c" role="button"> Piazza </a>
+          <a href="https://williammcdonald.github.io/picoctf2017/Level1/LeafoftheTree.html" class="btn btn-primary btn-c" role="button"> Leaf of the Tree </a>
+          <a href="https://williammcdonald.github.io/picoctf2017/Level1/looooong.html" class="btn btn-primary btn-c" role="button"> loooooong </a>
+          <a href="https://williammcdonald.github.io/picoctf2017/Level1/LeafoftheForest.html" class="btn btn-primary btn-c" role="button"> Leaf of the Forest </a>
+          <a href="https://williammcdonald.github.io/picoctf2017/Level1/WorldChat.html" class="btn btn-primary btn-c" role="button"> WorldChat </a>
         <h4> Master </h4>
-          <a href="Level1/MasterChallenge.html" class="btn btn-primary btn-c" role="button"> Master Challenge </a>
+          <a href="https://williammcdonald.github.io/picoctf2017/Level1/MasterChallenge.html" class="btn btn-primary btn-c" role="button"> Master Challenge </a>
       <br>
       <h3> Level 2 </h3>
         <h4> Forensics </h4>
-          <a href="Level2/MetaFindMe.html" class="btn btn-primary btn-c" role="button"> Meta Find Me </a>
-          <a href="Level2/LittleSchoolBus.html" class="btn btn-primary btn-c" role="button"> Little School Bus </a>
-          <a href="Level2/JustKeypTrying" class="btn btn-primary btn-c" role="button"> Just Keyp Trying </a>
+          <a href="https://williammcdonald.github.io/picoctf2017/Level2/MetaFindMe.html" class="btn btn-primary btn-c" role="button"> Meta Find Me </a>
+          <a href="https://williammcdonald.github.io/picoctf2017/Level2/LittleSchoolBus.html" class="btn btn-primary btn-c" role="button"> Little School Bus </a>
+          <a href="https://williammcdonald.github.io/picoctf2017/Level2/JustKeypTrying" class="btn btn-primary btn-c" role="button"> Just Keyp Trying </a>
         <h4> Cryptography </h4>
-          <a href="Level2/SoRandom.html" class="btn btn-primary btn-c" role="button"> SoRandom </a>
-          <a href="Level2/leakedHashes.html" class="btn btn-primary btn-c" role="button"> LeakedHashes </a>
-          <a href="Level2/WeirdRsa.html" class="btn btn-primary btn-c" role="button"> Weird RSA </a>
+          <a href="https://williammcdonald.github.io/picoctf2017/Level2/SoRandom.html" class="btn btn-primary btn-c" role="button"> SoRandom </a>
+          <a href="https://williammcdonald.github.io/picoctf2017/Level2/leakedHashes.html" class="btn btn-primary btn-c" role="button"> LeakedHashes </a>
+          <a href="https://williammcdonald.github.io/picoctf2017/Level2/WeirdRsa.html" class="btn btn-primary btn-c" role="button"> Weird RSA </a>
         <h4> Reverse Engineering </h4>
-          <a href="Level2/AThingCalledtheStack.html" class="btn btn-primary btn-c" role="button"> A Thing Called the Stack </a>
-          <a href="Level2/ProgrammersAssemble.html" class="btn btn-primary btn-c" role="button"> Programmers Assemble </a>
+          <a href="https://williammcdonald.github.io/picoctf2017/Level2/AThingCalledtheStack.html" class="btn btn-primary btn-c" role="button"> A Thing Called the Stack </a>
+          <a href="https://williammcdonald.github.io/picoctf2017/Level2/ProgrammersAssemble.html" class="btn btn-primary btn-c" role="button"> Programmers Assemble </a>
         <h4> Web Exploitation </h4>
-          <a href="Level2/MyFirstSQL.html" class="btn btn-primary btn-c" role="button"> My First SQL </a>
-          <a href="Level2/TW_GR_E1_ART.html" class="btn btn-primary btn-c" role="button"> TW_GR_E1_ART </a>
-          <a href="Level2/TW_GR_E2_EoTDS.html" class="btn btn-primary btn-c" role="button"> TW_GR_E2_EoTDS </a>
+          <a href="https://williammcdonald.github.io/picoctf2017/Level2/MyFirstSQL.html" class="btn btn-primary btn-c" role="button"> My First SQL </a>
+          <a href="https://williammcdonald.github.io/picoctf2017/Level2/TW_GR_E1_ART.html" class="btn btn-primary btn-c" role="button"> TW_GR_E1_ART </a>
+          <a href="https://williammcdonald.github.io/picoctf2017/Level2/TW_GR_E2_EoTDS.html" class="btn btn-primary btn-c" role="button"> TW_GR_E2_EoTDS </a>
         <h4> Binary Exploitation </h4>
-          <a href="Level2/Shellz.html" class="btn btn-primary btn-c" role="button"> Shellz </a>
-          <a href="Level2/Shells.html" class="btn btn-primary btn-c" role="button"> Shells </a>
-          <a href="Level2/GuessTheNumber.html" class="btn btn-primary btn-c" role="button"> Guess The Number </a>
-          <a href="Level2/IveGotASecret.html" class="btn btn-primary btn-c" role="button"> Ive Got A Secret </a>
-          <a href="Level2/Flagsay1.html" class="btn btn-primary btn-c" role="button"> Flagsay 1 </a>
-          <a href="Level2/VRGearConsole.html" class="btn btn-primary btn-c" role="button"> VR Gear Console </a>
+          <a href="https://williammcdonald.github.io/picoctf2017/Level2/Shellz.html" class="btn btn-primary btn-c" role="button"> Shellz </a>
+          <a href="https://williammcdonald.github.io/picoctf2017/Level2/Shells.html" class="btn btn-primary btn-c" role="button"> Shells </a>
+          <a href="https://williammcdonald.github.io/picoctf2017/Level2/GuessTheNumber.html" class="btn btn-primary btn-c" role="button"> Guess The Number </a>
+          <a href="https://williammcdonald.github.io/picoctf2017/Level2/IveGotASecret.html" class="btn btn-primary btn-c" role="button"> Ive Got A Secret </a>
+          <a href="https://williammcdonald.github.io/picoctf2017/Level2/Flagsay1.html" class="btn btn-primary btn-c" role="button"> Flagsay 1 </a>
+          <a href="https://williammcdonald.github.io/picoctf2017/Level2/VRGearConsole.html" class="btn btn-primary btn-c" role="button"> VR Gear Console </a>
         <h4> MISC </h4>
-          <a href="Level2/Yarn.html" class="btn btn-primary btn-c" role="button"> Yarn </a>
-          <a href="Level2/MysteryBox.html" class="btn btn-primary btn-c" role="button"> Mystery Box </a>
+          <a href="https://williammcdonald.github.io/picoctf2017/Level2/Yarn.html" class="btn btn-primary btn-c" role="button"> Yarn </a>
+          <a href="https://williammcdonald.github.io/picoctf2017/Level2/MysteryBox.html" class="btn btn-primary btn-c" role="button"> Mystery Box </a>
         <h4> Master </h4>
-          <a href="Level2/MasterChallenge.html" class="btn btn-primary btn-c" role="button"> Master Challenge </a>
+          <a href="https://williammcdonald.github.io/picoctf2017/Level2/MasterChallenge.html" class="btn btn-primary btn-c" role="button"> Master Challenge </a>
       <br>
       <h3> Level 3 </h3>
         <h4> Forensics </h4>
-          <a href="Level3/ConnectTheWigle.html" class="btn btn-primary btn-c" role="button"> Connect The Wigle </a>
+          <a href="https://williammcdonald.github.io/picoctf2017/Level3/ConnectTheWigle.html" class="btn btn-primary btn-c" role="button"> Connect The Wigle </a>
         <h4> Cryptography </h4>
-          <a href="Level3/HashChain.html" class="btn btn-primary btn-c" role="button"> HashChain </a>
-          <a href="Level3/Broadcast.html" class="btn btn-primary btn-c" role="button"> Broadcast </a>
+          <a href="https://williammcdonald.github.io/picoctf2017/Level3/HashChain.html" class="btn btn-primary btn-c" role="button"> HashChain </a>
+          <a href="https://williammcdonald.github.io/picoctf2017/Level3/Broadcast.html" class="btn btn-primary btn-c" role="button"> Broadcast </a>
         <h4> Reverse Engineering </h4>
-          <a href="Level3/JSutDuckItUp.html" class="btn btn-primary btn-c" role="button"> JSut Duck It Up </a>
-          <a href="Level3/Coffee.html" class="btn btn-primary btn-c" role="button"> Coffee </a>
-          <a href="Level3/MuchAdoAboutHacking.html" class="btn btn-primary btn-c" role="button"> Much Ado About Hacking </a>
+          <a href="https://williammcdonald.github.io/picoctf2017/Level3/JSutDuckItUp.html" class="btn btn-primary btn-c" role="button"> JSut Duck It Up </a>
+          <a href="https://williammcdonald.github.io/picoctf2017/Level3/Coffee.html" class="btn btn-primary btn-c" role="button"> Coffee </a>
+          <a href="https://williammcdonald.github.io/picoctf2017/Level3/MuchAdoAboutHacking.html" class="btn btn-primary btn-c" role="button"> Much Ado About Hacking </a>
         <h4> Web Exploitation </h4>
-          <a href="Level3/Biscuit.html" class="btn btn-primary btn-c" role="button"> Biscuit </a>
-          <a href="Level3/AHappyUnion.html" class="btn btn-primary btn-c" role="button"> A Happy Union </a>
-          <a href="Level3/NoEyes.html" class="btn btn-primary btn-c" role="button"> No Eyes </a>
-          <a href="Level3/TW_GR_E3_GtI.html" class="btn btn-primary btn-c" role="button"> TW_GR_E3_GtI </a>
+          <a href="https://williammcdonald.github.io/picoctf2017/Level3/Biscuit.html" class="btn btn-primary btn-c" role="button"> Biscuit </a>
+          <a href="https://williammcdonald.github.io/picoctf2017/Level3/AHappyUnion.html" class="btn btn-primary btn-c" role="button"> A Happy Union </a>
+          <a href="https://williammcdonald.github.io/picoctf2017/Level3/NoEyes.html" class="btn btn-primary btn-c" role="button"> No Eyes </a>
+          <a href="https://williammcdonald.github.io/picoctf2017/Level3/TW_GR_E3_GtI.html" class="btn btn-primary btn-c" role="button"> TW_GR_E3_GtI </a>
         <h4> Binary Exploitation </h4>
-          <a href="Level3/ConfigConsole.html" class="btn btn-primary btn-c" role="button"> Config Console </a>
-          <a href="Level3/EnterTheMatrix.html" class="btn btn-primary btn-c" role="button"> Enter The Matrix </a>
-          <a href="Level3/ChatLogger.html" class="btn btn-primary btn-c" role="button"> Chat Logger </a>
+          <a href="https://williammcdonald.github.io/picoctf2017/Level3/ConfigConsole.html" class="btn btn-primary btn-c" role="button"> Config Console </a>
+          <a href="https://williammcdonald.github.io/picoctf2017/Level3/EnterTheMatrix.html" class="btn btn-primary btn-c" role="button"> Enter The Matrix </a>
+          <a href="https://williammcdonald.github.io/picoctf2017/Level3/ChatLogger.html" class="btn btn-primary btn-c" role="button"> Chat Logger </a>
         <h4> MISC </h4>
           <h5> NONE </h5>
         <h4> Master </h4>
-          <a href="Level4/MasterChallenge.html" class="btn btn-primary btn-c" role="button"> Master Challenge </a>
+          <a href="https://williammcdonald.github.io/picoctf2017/Level3/MasterChallenge.html" class="btn btn-primary btn-c" role="button"> Master Challenge </a>
         <br>
       <h3> Level 4 </h3>
         <h4> Forensics </h4>
-          <a href="Level4/PuzzlinglyAccountable.html" class="btn btn-primary btn-c" role="button"> Puzzlingly Accountable </a>
+          <a href="https://williammcdonald.github.io/picoctf2017/Level4/PuzzlinglyAccountable.html" class="btn btn-primary btn-c" role="button"> Puzzlingly Accountable </a>
         <h4> Cryptography </h4>
-          <a href="Level4/SmallSign.html" class="btn btn-primary btn-c" role="button"> Small Sign </a>
-          <a href="Level4/EncryptedShell.html" class="btn btn-primary btn-c" role="button"> Encrypted Shell </a>
-          <a href="Level4/ECC2.html" class="btn btn-primary btn-c" role="button"> ECC2 </a>
+          <a href="https://williammcdonald.github.io/picoctf2017/Level4/SmallSign.html" class="btn btn-primary btn-c" role="button"> Small Sign </a>
+          <a href="https://williammcdonald.github.io/picoctf2017/Level4/EncryptedShell.html" class="btn btn-primary btn-c" role="button"> Encrypted Shell </a>
+          <a href="https://williammcdonald.github.io/picoctf2017/Level4/ECC2.html" class="btn btn-primary btn-c" role="button"> ECC2 </a>
         <h4> Reverse Engineering </h4>
-          <a href="Level4/MIPS.html" class="btn btn-primary btn-c" role="button"> MIPS </a>
-          <a href="Level4/Forest.html" class="btn btn-primary btn-c" role="button"> Forest </a>
+          <a href="https://williammcdonald.github.io/picoctf2017/Level4/MIPS.html" class="btn btn-primary btn-c" role="button"> MIPS </a>
+          <a href="https://williammcdonald.github.io/picoctf2017/Level4/Forest.html" class="btn btn-primary btn-c" role="button"> Forest </a>
         <h4> Web Exploitation </h4>
-          <a href="Level4/AKaleyCeilidh.html" class="btn btn-primary btn-c" role="button"> A Kaley Ceilidh </a>
-          <a href="Level4/TW_GR_E4_STW.html" class="btn btn-primary btn-c" role="button"> TW_GR_E4_STW </a>
+          <a href="https://williammcdonald.github.io/picoctf2017/Level4/AKaleyCeilidh.html" class="btn btn-primary btn-c" role="button"> A Kaley Ceilidh </a>
+          <a href="https://williammcdonald.github.io/picoctf2017/Level4/TW_GR_E4_STW.html" class="btn btn-primary btn-c" role="button"> TW_GR_E4_STW </a>
         <h4> Binary Exploitation </h4>
-          <a href="Level4/Flagsay2.html" class="btn btn-primary btn-c" role="button"> Flagsay 2 </a>
-          <a href="Level4/Aggregator.html" class="btn btn-primary btn-c" role="button"> Aggregator </a>
-          <a href="Level4/DeeperIntoTheMatrix.html" class="btn btn-primary btn-c" role="button"> Deeper Into The Matrix </a>
-          <a href="Level4/ContactHelper.html" class="btn btn-primary btn-c" role="button"> Contact Helper </a>
+          <a href="https://williammcdonald.github.io/picoctf2017/Level4/Flagsay2.html" class="btn btn-primary btn-c" role="button"> Flagsay 2 </a>
+          <a href="https://williammcdonald.github.io/picoctf2017/Level4/Aggregator.html" class="btn btn-primary btn-c" role="button"> Aggregator </a>
+          <a href="https://williammcdonald.github.io/picoctf2017/Level4/DeeperIntoTheMatrix.html" class="btn btn-primary btn-c" role="button"> Deeper Into The Matrix </a>
+          <a href="https://williammcdonald.github.io/picoctf2017/Level4/ContactHelper.html" class="btn btn-primary btn-c" role="button"> Contact Helper </a>
         <h4> MISC </h4>
         <h4> Master </h4>
-          <a href="Level4/MasterChallenge.html" class="btn btn-primary btn-c" role="button"> Master Challenge 4 </a>
+          <a href="https://williammcdonald.github.io/picoctf2017/Level4/MasterChallenge.html" class="btn btn-primary btn-c" role="button"> Master Challenge 4 </a>
 
       <br>
       <h3> Final Level </h3>
@@ -210,8 +151,7 @@ $(document).ready(function(){
     </div>
             <!-- Right -->
       <div class="col-sm-2 sidenav">
-        <h3> Previous Placings in Competitions </h3>
-        <p> No placings yet, but I hope to be participating in picoctf 2018. </p>
+        <div class="education"></div>
       </div>
     </div>
   </div>

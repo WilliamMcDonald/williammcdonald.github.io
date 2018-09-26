@@ -9,3 +9,7 @@ $(document).ready(function(){
 $(document).ready(function(){
   $('.education').load("https://williammcdonald.github.io/templates/education.html");
 });
+
+$(document).ready(function(){
+  $('.foot').load("https://williammcdonald.github.io/templates/foot.html");
+});
