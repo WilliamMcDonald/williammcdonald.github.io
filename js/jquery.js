@@ -1,11 +1,11 @@
 $(document).ready(function(){
-  $('.header').load("templates/header.html");
+  $('.header').load("https://williammcdonald.github.io/templates/header.html");
 });
 
 $(document).ready(function(){
-  $('.contact').load("templates/contact.html");
+  $('.contact').load("https://williammcdonald.github.io/templates/contact.html");
 });
 
 $(document).ready(function(){
-  $('.education').load("templates/education.html");
+  $('.education').load("https://williammcdonald.github.io/templates/education.html");
 });
